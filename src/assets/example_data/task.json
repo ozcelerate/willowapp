@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Excavation",
+      "image": "./assets/images/swms/jackhammer.png",
+      "description": "Setting up sheeting and support structures for suspended concrete slabs.",
+      "swms": [1,2,3]
+    },
+    {
+      "id": 2,
+      "name": "Concreting",
+      "image": "./assets/images/swms/wheelbarrow.png",
+      "description": "Pump operation and distribution. Handling practices and best practices for safely spreading and setting.",
+      "swms": [2,3,4],
+      "selected": true
+    },
+    {
+      "id": 3,
+      "name": "Excavation",
+      "image": "./assets/images/swms/excavate.png",
+      "description": "Operating procedures and working distances and access. Enviroment considerations",
+      "swms": [3,4,5]
+    },
+    {
+      "id": 4,
+      "name": "Scaffolding",
+      "image": "./assets/images/swms/crane.png",
+      "description": "Foundation preparation. Assembly procedures. Maximum heights and clearances",
+      "swms": [5,6]
+    },
+    {
+      "id": 5,
+      "name": "Electrical",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Safety tag requirment. Permit to operate tagging. Emergency shutdown.",
+      "swms": [1,2,3,5,6]
+    },
+    {
+      "id": 6,
+      "name": "Barge",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Driving the barge.",
+      "swms": [1,2,7,8]
+    },
+    {
+      "id": 7,
+      "name": "Materials",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Delivery and acceptance of materials",
+      "swms": [1]
+    },
+    {
+      "id": 8,
+      "name": "Smoko",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Site made save and warnings and barricades in place",
+      "swms": [5,6,7,8]
+    }
+  ]
+}

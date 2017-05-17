@@ -1,0 +1,264 @@
+import { Component } from '@angular/core';
+import { NavController, SegmentButton, AlertController, LoadingController } from 'ionic-angular';
+import { Validators, FormGroup, FormControl } from '@angular/forms';
+//import { counterRangeValidator } from '../../components/counter-input/counter-input';
+import { SwmDetailPage } from '../swm-detail/swm-detail';
+
+import { SwmsModel } from '../../classes/swm.model';
+import { SwmService } from '../../providers/swm';
+
+import { TasksModel } from '../../classes/task.model';
+import { TaskService } from '../../providers/task';
+
+// import { List2Model } from '../list-2/list-2.model';
+// import { List2Service } from '../list-2/list-2.service';
+import 'rxjs/Rx';
+
+@Component({
+  selector: 'prestart-page',
+  templateUrl: 'prestart.html'
+})
+export class PrestartPage {
+  section: string;
+
+  post_form: any;
+  event_form: FormGroup;
+  card_form: FormGroup;
+  //list2: List2Model = new List2Model();
+  swmlist: SwmsModel = new SwmsModel();
+  activeSWMs: SwmsModel = new SwmsModel(); // these are determined from the tasks
+  tasklist: TasksModel = new TasksModel();
+  requiredSWMids: number[] = [];
+  loading: any;
+
+  categories_checkbox_open: boolean;
+  categories_checkbox_result;
+  checkboxTagsForm: FormGroup;
+
+  constructor(public nav: NavController,
+              public alertCtrl: AlertController,
+              public swmService: SwmService,
+              public taskService: TaskService,
+            //  public list2Service: List2Service,
+              public loadingCtrl: LoadingController) {
+    this.section = "task";
+    this.loading = this.loadingCtrl.create();
+
+    this.post_form = new FormGroup({
+      //title: new FormControl('', Validators.required),
+      //description: new FormControl('', Validators.required),
+      //servings: new FormControl(2, counterRangeValidator(10, 1)),
+      //time: new FormControl('01:30', Validators.required),
+      //temperature: new FormControl(180),
+
+        tag_1: new FormControl(false),
+        tag_2: new FormControl(false),
+        tag_3: new FormControl(true),
+        tag_4: new FormControl(true),
+        tag_5: new FormControl(false),
+        tag_6: new FormControl(false),
+        tag_7: new FormControl(true),
+        tag_8: new FormControl(false)
+
+    });
+    this.event_form = new FormGroup({
+      title: new FormControl('', Validators.required),
+      location: new FormControl('', Validators.required),
+      from_date: new FormControl('2016-09-18', Validators.required),
+      from_time: new FormControl('13:00', Validators.required),
+      to_date: new FormControl('', Validators.required),
+      to_time: new FormControl('', Validators.required)
+    });
+    this.card_form = new FormGroup({
+      card_number: new FormControl('', Validators.required),
+      card_holder: new FormControl('', Validators.required),
+      cvc: new FormControl('', Validators.required),
+      exp_date: new FormControl('', Validators.required),
+      save_card: new FormControl(true, Validators.required)
+    });
+
+    // this.checkboxTagsForm = new FormGroup({
+    //   tag_1: new FormControl(false),
+    //   tag_2: new FormControl(false),
+    //   tag_3: new FormControl(true),
+    //   tag_4: new FormControl(true),
+    //   tag_5: new FormControl(false),
+    //   tag_6: new FormControl(false),
+    //   tag_7: new FormControl(true),
+    //   tag_8: new FormControl(false)
+    // });
+  }
+
+  ionViewDidLoad() {
+
+    console.log("ionViewDidLoad prestart")
+    this.loading.present();
+    this.swmService
+      .getData()
+      .then(data => {
+        console.log("got swms data in prestart")
+        this.swmlist.items = data.items;
+        this.loading.dismiss();
+      });
+
+    this.taskService
+      .getData()
+      .then(data => {
+        console.log("got tasks data in prestart")
+        this.tasklist.items = data.items;
+        //this.loading.dismiss();
+      });
+
+
+  }
+
+
+  onSegmentChanged(segmentButton: SegmentButton) {
+    console.log('Segment changed to', segmentButton.value);
+  }
+
+  onSegmentSelected(segmentButton: SegmentButton) {
+    console.log('Segment selected', segmentButton.value);
+  }
+
+  createPost1(){
+    console.log("create post")
+    console.log(this.post_form.value);
+    //onsole.log(this.checkboxTagsForm.value);
+  }
+
+  generateSwms(){
+    console.log("generate swms");
+    // Based on the selected tasks generate the list of selected swms required
+    var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+    var countedNames = names.reduce(function (allNames, name) {
+      if (name in allNames) {
+        allNames[name]++;
+      }
+      else {
+        allNames[name] = 1;
+      }
+      return allNames;
+    }, {});
+
+    console.log(countedNames)
+
+
+    // build an array of all the swm ids required
+    this.tasklist.items.forEach((task) => {
+      // only if the task is active
+      if (task.selected) {
+        task.swms.forEach((id) => {
+          console.log("swm id " + id)
+          if (this.requiredSWMids.indexOf(id) < 0) {
+            this.requiredSWMids.push(id)
+          }
+
+        })
+      }
+    })
+    console.log(this.requiredSWMids)
+
+
+    this.activeSWMs.items = this.swmlist.items.filter((swm) => {
+      console.log("swm " + swm.name + " is " + swm.inuse)
+      swm.inuse = false;
+      // now see if swm id in the active lists
+      if (this.requiredSWMids.indexOf(swm.id) >= 0) {
+        swm.inuse = true;
+      }
+      return swm.inuse;
+
+    })
+
+
+
+    // got next segment / tab for swms
+    this.section = "swm";
+  }
+
+  createEvent(){
+    console.log(this.event_form.value);
+  }
+
+  createCard(){
+    console.log(this.card_form.value);
+  }
+
+  chooseCategory(){
+    console.log("chooseCategory")
+    let alert = this.alertCtrl.create({
+      cssClass: 'category-prompt'
+    });
+    alert.setTitle('Category');
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Logan',
+      value: 'logan',
+      checked: true
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Gateway Sth',
+      value: 'gatewaySouth'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Gateway Nth',
+      value: 'gatewayNorth'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Lismore',
+      value: 'lismore'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'New Zealand',
+      value: 'newZealand'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Cabolture',
+      value: 'cabolture'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Barbados',
+      value: 'barbados'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Cuba',
+      value: 'cuba'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: 'Panama',
+      value: 'panama'
+    });
+
+
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Confirm',
+      handler: data => {
+        console.log('Checkbox data:', data);
+        this.categories_checkbox_open = false;
+        this.categories_checkbox_result = data;
+      }
+    });
+    alert.present().then(() => {
+      this.categories_checkbox_open = true;
+    });
+  }
+
+  swmdetails(swmid, swm) {
+    console.log("goto swm details for " + swmid);
+    this.nav.push(SwmDetailPage, {id: swmid, swm: swm});
+  }
+
+}

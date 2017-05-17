@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Prestarts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="forms-examples-content">
+  <ion-segment class="forms-examples-segment" [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">
+    <ion-segment-button value="task" (ionSelect)="onSegmentSelected($event)">
+      Tasks
+    </ion-segment-button>
+    <ion-segment-button value="swm" (ionSelect)="onSegmentSelected($event)">
+      SWMs
+    </ion-segment-button>
+    <ion-segment-button value="safety" (ionSelect)="onSegmentSelected($event)">
+      Safety Focus
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="section" class="forms-wrapper">
+    <div *ngSwitchCase="'task'" class="post-example-view">
+      <div class="sample-form post-form">
+        <section class="form-section">
+
+          <button ion-button block large class="upload-image-button">
+            <ion-icon name="md-rainy"></ion-icon>
+            <h3 class="button-title">Place Weather Component here</h3>
+          </button>
+
+          <ion-item>
+            <ion-icon name="md-build" item-left></ion-icon>
+              Mighty Mick
+            <p item-right>supervisor</p>
+          </ion-item>
+        </section>
+        <section class="form-section">
+          <button  ion-button block icon-right class="choose-category-button" (click)="chooseCategory()">
+            Choose Site {{categories_checkbox_result}}
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </button>
+        </section>
+        <ion-item-divider>Tasks</ion-item-divider>
+        <div class="sample-form">
+          <ion-list class="sample-form checkbox-tags">
+            <ion-item class="checkbox-tag"
+                      *ngFor="let task of tasklist.items">
+              <ion-label>{{task.name}}</ion-label>
+              <ion-checkbox [(ngModel)]="task.selected"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </div>
+
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-post-button" (click)="generateSwms()">Generate SWMs!</button>
+        </section>
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'swm'" class="event-example-view">
+      <form class="sample-form event-form" [formGroup]="event_form" (ngSubmit)="createEvent()">
+        <section class="form-section">
+          <h2 class="section-title">SWMs Generated from Task List</h2>
+          <div class="list-mini-content">
+            <div class="list-mini">
+              <ion-list>
+                <button class="list-item" ion-item *ngFor="let item of activeSWMs.items"
+                        (click)="swmdetails(item.id, item)" type="button">
+                  <ion-row no-padding class="content-row one-line">
+                    <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
+                    <ion-col no-padding width-18 class="item-avatar">
+                      <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+                    </ion-col>
+                    <ion-col no-padding width-72 class="item-content">
+                      <h3 class="item-title">{{item.name}}</h3>
+                      <p class="item-description">{{item.description}}</p>
+                      {{item.id}}
+                    </ion-col>
+                    <ion-col no-padding width-10 class="item-icon">
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </button>
+              </ion-list>
+            </div>
+          </div>
+        </section>
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-event-button" type="submit" [disabled]="!event_form.valid">Done!</button>
+        </section>
+      </form>
+    </div>
+    <div *ngSwitchCase="'safety'" class="card-example-view">
+      <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">
+        <section class="form-section">
+          <h2 class="section-title">Credit Card Information</h2>
+          <ion-item>
+            <ion-label floating>Card Number</ion-label>
+            <ion-input type="text" formControlName="card_number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Card Holder</ion-label>
+            <ion-input type="text" formControlName="card_holder"></ion-input>
+          </ion-item>
+          <ion-row no-padding class="multi-input-row">
+            <ion-col no-padding width-50>
+              <ion-item class="multi-input">
+                <ion-label floating>CVC</ion-label>
+                <ion-input type="text" formControlName="cvc"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding width-50>
+              <ion-item class="multi-input time-item">
+                <ion-label floating>Exp. Date</ion-label>
+                <ion-datetime formControlName="exp_date" displayFormat="MM/YYYY" pickerFormat="MM-YYYY"></ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </section>
+        <ion-list class="card-preferences">
+          <ion-item class="switcher-item">
+            <ion-label>Save this card</ion-label>
+            <ion-toggle formControlName="save_card"></ion-toggle>
+          </ion-item>
+        </ion-list>
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-card-button" type="submit" [disabled]="!card_form.valid">Confirm</button>
+        </section>
+      </form>
+    </div>
+  </div>
+</ion-content>
