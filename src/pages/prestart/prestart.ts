@@ -150,7 +150,11 @@ export class PrestartPage {
         })
       }
     })
-    console.log(this.requiredSWMids)
+    console.log(this.requiredSWMids);
+    // save requiredSWMids to swmService to use later to cross reference
+    // against each worker to make sure they have done the swm courses
+    // required for the day's tasks
+    this.swmService.setRequiredSwms(this.requiredSWMids);
 
     // generate a local list of just the active swms to display
     this.activeSWMs.items = this.swmlist.items.filter((swm) => {

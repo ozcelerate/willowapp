@@ -20,6 +20,7 @@ export class SwmService {
 
   // global instance of the swms status - ie active / editied / generated
   swmlist: SwmsModel = new SwmsModel();
+  requiredSwms: number[];
 
   constructor(public http: Http) {
     console.log('Hello Swm Provider');
@@ -49,5 +50,15 @@ export class SwmService {
   getSwmList() {
     console.log("get swm list from service")
     return this.swmlist;
+  }
+
+  setRequiredSwms(requiredSwms) {
+    this.requiredSwms = requiredSwms;
+    console.log("set required swms in swmService")
+    console.log(this.requiredSwms)
+  }
+
+  getRequiredSwms() {
+    return this.requiredSwms;
   }
 }

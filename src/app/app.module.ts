@@ -24,6 +24,7 @@ import { PrestartPage } from '../pages/prestart/prestart';
 import { FiltersPage } from '../pages/filters/filters';
 import { SwmDetailPage } from '../pages/swm-detail/swm-detail';
 import { SwmListEditPage } from '../pages/swm-list-edit/swm-list-edit';
+import { ClockOnPage } from '../pages/clock-on/clock-on';
 
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
@@ -45,6 +46,7 @@ import { List2Service } from '../pages/list-2/list-2.service';
 import { ScheduleService } from '../pages/schedule/schedule.service';
 import { SwmService } from '../providers/swm';
 import { TaskService } from '../providers/task';
+import { WorkerService } from '../providers/worker';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,7 @@ import { TaskService } from '../providers/task';
     PrestartPage,
     SwmDetailPage,
     SwmListEditPage,
+    ClockOnPage,
 
     PreloadImage,
     BackgroundImage,
@@ -111,10 +114,12 @@ import { TaskService } from '../providers/task';
     PrivacyPolicyPage,
     PrestartPage,
     SwmDetailPage,
-    SwmListEditPage
+    SwmListEditPage,
+    ClockOnPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
-              List1Service, List2Service, ScheduleService, SwmService, TaskService],
+              List1Service, List2Service, ScheduleService, SwmService,
+              TaskService, WorkerService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

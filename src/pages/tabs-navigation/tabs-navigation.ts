@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 //import { ListingPage } from '../listing/listing';
-import { ProfilePage } from '../profile/profile';
+//import { ProfilePage } from '../profile/profile';
 import { NotificationsPage } from '../notifications/notifications';
 import { PrestartPage } from '../prestart/prestart';
+import { ClockOnPage } from '../clock-on/clock-on';
 
 @Component({
   selector: 'tabs-navigation',
@@ -17,7 +18,8 @@ export class TabsNavigationPage {
   constructor() {
     //this.tab1Root = ListingPage;
     this.tab1Root = PrestartPage;
-    this.tab2Root = ProfilePage;
+    //this.tab2Root = ProfilePage;
+    this.tab2Root = ClockOnPage;
     this.tab3Root = NotificationsPage;
   }
 }
