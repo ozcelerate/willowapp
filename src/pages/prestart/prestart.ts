@@ -3,6 +3,7 @@ import { NavController, SegmentButton, AlertController, LoadingController } from
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 //import { counterRangeValidator } from '../../components/counter-input/counter-input';
 import { SwmDetailPage } from '../swm-detail/swm-detail';
+import { SwmListEditPage } from '../swm-list-edit/swm-list-edit';
 
 import { SwmsModel } from '../../classes/swm.model';
 import { SwmService } from '../../providers/swm';
@@ -51,14 +52,14 @@ export class PrestartPage {
       //time: new FormControl('01:30', Validators.required),
       //temperature: new FormControl(180),
 
-        tag_1: new FormControl(false),
-        tag_2: new FormControl(false),
-        tag_3: new FormControl(true),
-        tag_4: new FormControl(true),
-        tag_5: new FormControl(false),
-        tag_6: new FormControl(false),
-        tag_7: new FormControl(true),
-        tag_8: new FormControl(false)
+        // tag_1: new FormControl(false),
+        // tag_2: new FormControl(false),
+        // tag_3: new FormControl(true),
+        // tag_4: new FormControl(true),
+        // tag_5: new FormControl(false),
+        // tag_6: new FormControl(false),
+        // tag_7: new FormControl(true),
+        // tag_8: new FormControl(false)
 
     });
     this.event_form = new FormGroup({
@@ -112,6 +113,12 @@ export class PrestartPage {
 
   }
 
+  ionViewWillEnter() {
+
+    console.log ("entering prestart page .... recalc the active swms");
+    this.generateActiveSwms()
+  }
+
 
   onSegmentChanged(segmentButton: SegmentButton) {
     console.log('Segment changed to', segmentButton.value);
@@ -127,24 +134,10 @@ export class PrestartPage {
     //onsole.log(this.checkboxTagsForm.value);
   }
 
+  // Generate the active swms from the active tasks
+  // Save the updated swm list to the swmService for use elsewhere
   generateSwms(){
     console.log("generate swms");
-    // Based on the selected tasks generate the list of selected swms required
-    var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
-
-    var countedNames = names.reduce(function (allNames, name) {
-      if (name in allNames) {
-        allNames[name]++;
-      }
-      else {
-        allNames[name] = 1;
-      }
-      return allNames;
-    }, {});
-
-    console.log(countedNames)
-
-
     // build an array of all the swm ids required
     this.tasklist.items.forEach((task) => {
       // only if the task is active
@@ -154,13 +147,12 @@ export class PrestartPage {
           if (this.requiredSWMids.indexOf(id) < 0) {
             this.requiredSWMids.push(id)
           }
-
         })
       }
     })
     console.log(this.requiredSWMids)
 
-
+    // generate a local list of just the active swms to display
     this.activeSWMs.items = this.swmlist.items.filter((swm) => {
       console.log("swm " + swm.name + " is " + swm.inuse)
       swm.inuse = false;
@@ -169,13 +161,18 @@ export class PrestartPage {
         swm.inuse = true;
       }
       return swm.inuse;
-
     })
-
-
-
+    // update the service
+    this.swmService.updateSwmList(this.swmlist);
     // got next segment / tab for swms
     this.section = "swm";
+  }
+
+  generateActiveSwms() {
+    // just generate a list of active swms
+    this.activeSWMs.items = this.swmlist.items.filter((swm) => {
+      return swm.inuse;
+    })
   }
 
   createEvent(){
@@ -259,6 +256,11 @@ export class PrestartPage {
   swmdetails(swmid, swm) {
     console.log("goto swm details for " + swmid);
     this.nav.push(SwmDetailPage, {id: swmid, swm: swm});
+  }
+
+  editActiveSwms() {
+    console.log("edit swm list");
+    this.nav.push(SwmListEditPage);
   }
 
 }

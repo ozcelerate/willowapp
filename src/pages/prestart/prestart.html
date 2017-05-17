@@ -56,7 +56,7 @@
 
     </div>
     <div *ngSwitchCase="'swm'" class="event-example-view">
-      <form class="sample-form event-form" [formGroup]="event_form" (ngSubmit)="createEvent()">
+      <div class="sample-form event-form">
         <section class="form-section">
           <h2 class="section-title">SWMs Generated from Task List</h2>
           <div class="list-mini-content">
@@ -84,9 +84,9 @@
           </div>
         </section>
         <section class="form-section">
-          <button ion-button block class="form-action-button create-event-button" type="submit" [disabled]="!event_form.valid">Done!</button>
+          <button ion-button block class="form-action-button create-event-button" (click)="editActiveSwms()">Edit SWM List!</button>
         </section>
-      </form>
+      </div>
     </div>
     <div *ngSwitchCase="'safety'" class="card-example-view">
       <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">

@@ -18,10 +18,15 @@ import { SwmsModel } from '../classes/swm.model';
 @Injectable()
 export class SwmService {
 
+  // global instance of the swms status - ie active / editied / generated
+  swmlist: SwmsModel = new SwmsModel();
+
   constructor(public http: Http) {
     console.log('Hello Swm Provider');
   }
 
+  // this gets the data from the server - just the swm definitions .. .therefore
+  // are no live status in this data.
   getData(): Promise<SwmsModel> {
     console.log("getData swms")
     return this.http.get('./assets/example_data/swm.json')
@@ -33,5 +38,16 @@ export class SwmService {
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
+  }
+
+  updateSwmList(swmlist) {
+    console.log("updated swmlist in service")
+    this.swmlist = swmlist;
+    console.log(this.swmlist.items)
+  }
+
+  getSwmList() {
+    console.log("get swm list from service")
+    return this.swmlist;
   }
 }

@@ -23,6 +23,7 @@ import { FormLayoutPage } from '../pages/form-layout/form-layout';
 import { PrestartPage } from '../pages/prestart/prestart';
 import { FiltersPage } from '../pages/filters/filters';
 import { SwmDetailPage } from '../pages/swm-detail/swm-detail';
+import { SwmListEditPage } from '../pages/swm-list-edit/swm-list-edit';
 
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
@@ -71,6 +72,7 @@ import { TaskService } from '../providers/task';
     PrivacyPolicyPage,
     PrestartPage,
     SwmDetailPage,
+    SwmListEditPage,
 
     PreloadImage,
     BackgroundImage,
@@ -108,7 +110,8 @@ import { TaskService } from '../providers/task';
     TermsOfServicePage,
     PrivacyPolicyPage,
     PrestartPage,
-    SwmDetailPage
+    SwmDetailPage,
+    SwmListEditPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService, TaskService],

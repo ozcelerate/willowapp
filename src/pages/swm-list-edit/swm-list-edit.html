@@ -1,0 +1,36 @@
+<!--
+  Generated template for the SwmListEdit page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit SWM List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="list-mini-content">
+  <!--<div class="list-mini">
+    <ion-list>
+      <button class="list-item" ion-item *ngFor="let item of swmlist.items">
+        <ion-row no-padding class="content-row one-line" >
+          <ion-col no-padding width-18 class="item-avatar">
+            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+          </ion-col>
+          <ion-col no-padding width-72 class="item-content">
+            <h3 class="item-title">{{item.name}}</h3>
+            <p class="item-description">{{item.description}}</p>
+          </ion-col>
+        </ion-row>
+      </button>
+    </ion-list>
+  </div>-->
+  <ion-list>
+    <ion-item *ngFor="let item of swmlist.items">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.inuse"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
