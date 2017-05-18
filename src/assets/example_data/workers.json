@@ -12,14 +12,14 @@
         "image": "./assets/images/notifications/100x100Notification2.png",
         "message": "Justin invited you to the event Bday Party",
         "date": "2:54 pm",
-        "validSwms": [1,2]
+        "validSwms": [1,2,3,4,5,6]
       },
       {
         "name": "Phillip",
         "image": "./assets/images/notifications/100x100Notification3.jpg",
         "message": "Alessia wrote on your timeline",
         "date": "1:54 pm",
-        "validSwms": [1,2]
+        "validSwms": [1,2,5,6,7,8]
       },
       {
         "name": "George",

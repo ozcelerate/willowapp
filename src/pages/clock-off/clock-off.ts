@@ -7,8 +7,8 @@ import { WorkersModel } from '../../classes/worker.model';
 import { WorkerService } from '../../providers/worker';
 
 @Component({
-  selector: 'notifications-page',
-  templateUrl: 'notifications.html'
+  selector: 'clock-off-page',
+  templateUrl: 'clock-off.html'
 })
 export class ClockOffPage {
   workers: WorkersModel = new WorkersModel();

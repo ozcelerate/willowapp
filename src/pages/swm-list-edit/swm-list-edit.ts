@@ -38,6 +38,17 @@ export class SwmListEditPage {
   ionViewWillLeave() {
     console.log("about to leave swm list edit page ... update services??")
     this.swmService.updateSwmList(this.swmlist);
+    // also update the required swm list in the service
+    let rqswms: number[] = []
+    this.swmlist.items.forEach((swm) => {
+      // only if the task is active
+      if (swm.inuse) {
+        rqswms.push(swm.id);
+      }
+    });
+    this.swmService.setRequiredSwms(rqswms);
+    console.log("just set required swms")
+    console.log(rqswms)
   }
 
 }
