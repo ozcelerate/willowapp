@@ -25,6 +25,8 @@ import { FiltersPage } from '../pages/filters/filters';
 import { SwmDetailPage } from '../pages/swm-detail/swm-detail';
 import { SwmListEditPage } from '../pages/swm-list-edit/swm-list-edit';
 import { ClockOnPage } from '../pages/clock-on/clock-on';
+import { SwmPage } from '../pages/swm/swm';
+import { SafetyFocusPage } from '../pages/safety-focus/safety-focus';
 
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
@@ -76,6 +78,8 @@ import { WorkerService } from '../providers/worker';
     SwmDetailPage,
     SwmListEditPage,
     ClockOnPage,
+    SwmPage,
+    SafetyFocusPage,
 
     PreloadImage,
     BackgroundImage,
@@ -115,7 +119,9 @@ import { WorkerService } from '../providers/worker';
     PrestartPage,
     SwmDetailPage,
     SwmListEditPage,
-    ClockOnPage
+    ClockOnPage,
+    SwmPage,
+    SafetyFocusPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,

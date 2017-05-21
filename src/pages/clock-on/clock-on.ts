@@ -4,6 +4,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { WorkersModel } from '../../classes/worker.model';
 import { WorkerService } from '../../providers/worker';
 import { SwmService } from '../../providers/swm';
+import { SwmPage } from '../swm/swm';
 /*
   Generated class for the ClockOn page.
 
@@ -89,6 +90,7 @@ export class ClockOnPage {
 
   startSignIn(worker) {
     console.log("start the signin process");
+    this.nav.push(SwmPage, {'worker': worker});
 
   }
 }
