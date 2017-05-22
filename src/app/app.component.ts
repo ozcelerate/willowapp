@@ -6,6 +6,7 @@ import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { FormsPage } from '../pages/forms/forms';
 import { LayoutsPage } from '../pages/layouts/layouts';
 //import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
@@ -18,7 +19,8 @@ export class MyApp {
 
   // make WalkthroughPage the root (or first) page
   //rootPage: any = WalkthroughPage;
-  rootPage: any = TabsNavigationPage;
+  //rootPage: any = TabsNavigationPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, icon: string, component: any}>;
   pushPages: Array<{title: string, icon: string, component: any}>;
