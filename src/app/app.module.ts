@@ -27,6 +27,8 @@ import { SwmListEditPage } from '../pages/swm-list-edit/swm-list-edit';
 import { ClockOnPage } from '../pages/clock-on/clock-on';
 import { SwmPage } from '../pages/swm/swm';
 import { SafetyFocusPage } from '../pages/safety-focus/safety-focus';
+import { SafetyFocusDetailPage } from '../pages/safety-focus-detail/safety-focus-detail';
+import { SafetyIssuesPage } from '../pages/safety-issues/safety-issues';
 
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
@@ -49,6 +51,7 @@ import { ScheduleService } from '../pages/schedule/schedule.service';
 import { SwmService } from '../providers/swm';
 import { TaskService } from '../providers/task';
 import { WorkerService } from '../providers/worker';
+import { SafetyFocusService } from '../providers/safety-focus';
 
 @NgModule({
   declarations: [
@@ -80,6 +83,8 @@ import { WorkerService } from '../providers/worker';
     ClockOnPage,
     SwmPage,
     SafetyFocusPage,
+    SafetyFocusDetailPage,
+    SafetyIssuesPage,
 
     PreloadImage,
     BackgroundImage,
@@ -121,11 +126,13 @@ import { WorkerService } from '../providers/worker';
     SwmListEditPage,
     ClockOnPage,
     SwmPage,
-    SafetyFocusPage
+    SafetyFocusPage,
+    SafetyFocusDetailPage,
+    SafetyIssuesPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,
-              TaskService, WorkerService],
+              TaskService, WorkerService, SafetyFocusService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

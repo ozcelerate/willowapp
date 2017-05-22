@@ -7,14 +7,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>swm</ion-title>
+    <ion-title>SWMs</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="schedule-content">
-<pre>{{activeSWMs.items | json}}</pre>
 <ion-list class="schedule-list">
   <ion-item class="schedule-item" *ngFor="let item of activeSWMs.items">
     <ion-row>

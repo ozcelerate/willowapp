@@ -1,0 +1,210 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Hardhat",
+      "image": "./assets/images/swms/jackhammer.png",
+      "description": "Ensure hardhat are always used with yellow zone."
+
+    },
+    {
+      "id": 2,
+      "name": "Mesh Handling",
+      "image": "./assets/images/swms/wheelbarrow.png",
+      "description": "Sheet sizes above 6m x 3m must be handled by two workers."
+    },
+    {
+      "id": 3,
+      "name": "Don't Bale",
+      "image": "./assets/images/swms/excavate.png",
+      "description": "Stay in cockpit when a vehicle rolls. I can't begin to tell you how many times this same story has played out all around the country. It is so disheartening to hear it again. This is perhaps the toughest skill to teach a driver of a forklift - STAY IN THE COCKPIT. All the facts and figures will tell you intellectually that this is the safe thing to do, however when the truck starts to wobble, the gut feeling is to bale.
+Two thing can help us fight this dangerous reaction:
+1) Keep telling yourself - I will stay in the cockpit and practice bracing yourself in the cockpit preparing for a fall.
+2) Wear your seatbelt. This alone may delay your departure from the cockpit enough to save your lift."
+    },
+    /*{
+      "id": 4,
+      "name": "Forklift Blind Spots",
+      "image": "./assets/images/swms/crane.png",
+      "description": "When pedestrians for forklifts meet unexpectedly, it can have deadly consequences. Blind spots are one of the major causes for this unexpected meeting to take place. They include corners, doorways that open out to an aisle and other areas with limited visibility for both pedestrian and forklift operator.
+It is important that forklift operator's utilize their horn and take it slow when driving in these areas. It is also important that pedestrians are aware of the traffic in these areas and look before they leap. Each year there are fatalities caused by pedestrian forklift collisions. I'm confident that many of you over your career have gone out into an aisle without looking only to find a forklift in slamming on their brakes.
+
+
+It is important to take a moment when in these blind spots. Be aware of the traffic and don't go out into the aisle without first stopping and looking both ways to ensure the path is clear.
+In most cases pedestrians are in a hurry or focused on something other than their travel and simply dart out in front of the forklifts. Take the time . . . it can impact your life."
+    },
+    {
+      "id": 5,
+      "name": "Using Your Cell Phone In The Restroom",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "We're all guilty. Bathroom time has become a time to respond to texts and check our Instagram likes.  Given what we use the toilet for, it's safe to say that using a smartphone at the same time is a really gross habit.
+Bathrooms are covered in germs, pathogens, and enteric bacteria (from the intestinal tract), mostly from fecal matter.  According to the experts, the most contaminated surfaces are the door and toilet handles, the faucet, and the floor — in fact, studies found that one-fourth of purses had fecal matter from resting on bathroom floors.
+
+
+Even if you wash your hands, you can still touch a germ-coated surface like the faucet or door knob and re-contaminate yourself. The amount of germs or bacteria in the bathroom really depends on how often it's cleaned and sanitized, which you can control at home. But with public restrooms where so many people are bringing in germs and bacteria...not so much.
+When you flush the toilet, water with feces and urine sprays about six feet in every direction. And the aerosols increase with every flush, so if it's a public bathroom, there is dirty toilet water coating literally everything — especially the toilet paper dispenser, because it's right next to the toilet bowl.
+Any surface that the aerosols settle on can transmit things between people, so every time you set your phone down, it becomes contaminated with germs and fecal matter. Not to mention that it'll pick up whatever the last person placed on there, which could've been dirty toilet paper, used sanitary pads, etc. You really never know.
+According to the experts, there have been outbreaks of norovirus, E. coli, salmonella, shigella, hepatitis A, MRSA, Streptococcus, and the common stomach flu — all linked to public bathrooms.
+Urine can transmit pink eye and respiratory infections, if you get the germs and pathogens on your hands in the bathroom and then touch your face, eyes, nose, or mouth.
+So yes, clean hands are a must. But...sadly not everyone washes their hands every single time, so even if you did, you might be touching the same door handle that was touched by someone who skipped the soap. Norovirus, the most common cause of adult diarrhea in the U.S., is almost always linked to bad hand-washing habits.
+You might not eat a sandwich on the toilet, but would you eat a sandwich while checking Instagram after bringing your phone to the bathroom a few hours before? Probably yes. And as your fingers touch your phone and then the food, those germs from the bathroom end up right in your mouth. When you bring your phone to the bathroom, it's like leaving without washing your hands.
+Studies show that 9 out of 10 phones had a potential disease-causing microbe, and 16% tested positive for fecal matter. So when you use your phone in the bathroom, it essentially becomes a mobile germ carrier. The average person uses their cell phone for two hours a day, so it's very easy to recontaminate your hands and transmit the germs to yourself or someone else.
+If the bathroom is the root of the problem, the best solution is to keep your phone in your bag and away from the toilet. If you're home and you know your bathroom is super clean, then you might not have to worry as much (though you're still getting aerosolized fecal matter on it probably).
+So, in general, just don't.
+Germs aside, you're also risking dropping and drowning your phone in the toilet every time you bring it with you. Even if the rice trick works and your phone survives, now it's totally contaminated with germs and fecal matter in the smallest nooks and crannies,"  DISGUSTING.."
+    },
+    {
+      "id": 6,
+      "name": "Identifying Fatigue",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Fatigue is the condition of being physically or mentally tired or exhausted. Extreme fatigue can lead to uncontrolled and involuntary shutdown of the brain.
+Here are some things to look for in your coworkers to help identify fatigue. Everyone needs your help, because in most cases, people who are under significant fatigue can’t identify it themselves. These include:
+
+
+Their job performance slows.
+Their job quality is reduced.
+They can’t recall their last thought, conversation, or what they did a moment ago.
+They have trouble solving problems.
+They make errors.
+They have a near-miss accident.
+They have trouble focusing.
+The head droops.
+They can’t stop yawning.
+When you’re fatigued you will make errors in judgment. Your mind or eyes can be off task and you can make a critical error."
+    },
+    {
+      "id": 7,
+      "name": "Behavioral Safety - Why Do We Have Safety Meetings?",
+      "image": "./assets/images/swms/tipper.png",
+      "description": "Why do we have safety meetings? Safety meetings are an opportunity for management and your safety department to communicate to employees how they can do their jobs safer and better. Topics discussed in safety meetings may be topics that you are familiar with, or topics that you have limited knowledge about.
+ If the topic is something that you are familiar with, it may be easy to tune-out and not listen to the safety information presented. Do yourself a big favor and listen to the information as if you have never heard before. You may just learn something new, about the newest protective equipment, or a smarter way to do your job. Information passed on in a safety meeting has a purpose - to stop you or your co-worker from being injured. Safety meetings also allow employees an opportunity to relay safety concerns or improvement ideas to their supervisors.
+
+
+ Accidents result from unsafe acts or unsafe conditions. According to some experts, for a variety of reasons, unsafe acts typically account for 90% of all accidents. Safety meetings serve as a preventative measure against unsafe acts by educating employees on how they can do their job safely.
+ If you're still not sold, let's look at the potential cost of accidents. More specifically, how can accidents directly affect you?
+DEATH - The ultimate unwanted result. Where does this leave your loved ones?
+FINANCIAL COST - Lost pay or reduction in pay. Who pays the bills? Are you the sole income producer in your household?
+PAIN & SUFFERING - An obvious detriment that no one desires.
+DISABILITY - A life changing experience. Now you're not able to do what you use to do.  Maybe now you can't cast that fishing rod? Ride that bike, hug your wife, lift your child, or simply see? Or perhaps you're confined to a wheelchair. Good bye career.
+COMPETITIVENESS ON BIDDING JOBS - Other than payroll and benefits, worker' compensation insurance and accident costs may represent the bulk of a company's operating expense. When a company's operating expense increases, they are then less competitive to bid jobs. If your company is not awarded jobs, where does that leave you?
+YOUR CO-WORKERS SAFETY - Perhaps you and your co-worker have been working together for sometime now. Chances are you may spend as much time with your co-workers as you do your own family. Thus, you obviously do not want something bad to happen to them. Watch out for their safety too.
+Safety meetings are a perfect opportunity for you to communicate any safety ideas or concerns that you may have. Participate in your safety meetings. If you don't participate, then your ideas will not be heard. Who knows…the idea that you have may very well save your co-worker's life or even your own."
+    },
+    {
+      "id": 8,
+      "name": "Bring Your Child To Work Today",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Almost 20 years ago an organization started encouraging employees and employers to have a designated take your child to work day at the end of April. At some places the practice has taken hold, at other it hasn't. It's truly a novel idea and one we can utilize to work safer.
+
+The suggestion would be to make everyday bring your child or grandchild to work day, not in body, but in mind. As you go out to work today I'd challenge you to do two things:
+
+
+
+Do your various tasks as if your child or grandchild was next to you and you were teaching them the correct way to do it.
+When you stop and think about the various things you do, put them in the prospective that you are telling your child or grandchild to do it the way you are.
+
+With that in mind, I'm guessing there are some things you do on a regular basis that you would not ask your child to do. You would teach them a different way or the prescribed way rather than the way you do it.
+
+My challenge is to keep that perspective in everything you do. Many can think they are faster, quicker, stronger, or seasoned enough to do it the unsafe way, but the facts remain that it is just a matter of time. The odds are not in your favor.
+
+So today, go and pretend your child is working with you, see what a difference it makes in your everyday activities."
+    },
+    {
+      "id": 9,
+      "name": "Lockout Tagout",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Anyone who operates, cleans, services, adjusts, and repairs machinery or equipment should be aware of the hazards associated with that machinery. Any powered machinery or electrical equipment that can move in a way that would put people in danger is a hazard that can be prevented by following locking or tagging procedures. Failure to lock out or tag power sources on equipment can result in electrocutions, amputations, and other serious-sometimes fatal-accidents.
+Just this past week there were 4 stories in the news about workers who died doing their job related to not having control of hazardous energy. What are the most common causes of these accidents?
+
+
+The machine or piece of equipment was not completely shut off before a maintenance or repair operation. Not only must the machine be turned off but also the power source that goes to it.
+The machine was turned on accidentally, either out of carelessness or because the person who turned it on didn't realize that another worker was there and could get hurt.
+The machine wasn't working correctly but wasnt fixed, turned off, locked or tagged, and someone who didn't know about the problem used it.
+Moving equipment wasn't blocked.
+Safety procedures were inadequate or hadn't been properly explained.
+Remember the dangers and be on your guard around any machinery and moving equipment. Even if you don't operate the machinery, you could get caught in it and injured if it isn’t properly disconnected. So what can you do to prevent accidental injury from moving machinery?
+Ensure you know the hazardous energy associated with your equipment prior to doing any work on it.
+Ensure you know all the energy that could affect the task (electric, gravity, water, pneumatic, hydraulic, steam, etc)
+Ensure you control the accidental release of the energy prior to working on the equipment through lockout, tagout or alternative measures identified for your specific equipment.
+Never reach into moving equipment. In even the blink of an eye you could have a life changing injury.
+Test the energy after you believe it to be isolated. This is one of the most overlooked steps and probably the most important. Employees think they have isolated the energy at the source, but it isn't for one reason or another.
+Be aware of your personal safety and the safety of others when working with or around moving equipment and machinery. Always follow proper lockout and tagout procedures, even for a quick or minor repair!"
+    },
+    {
+      "id": 10,
+      "name": "Removing Guards",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "We recently had an incident at another facility where there was a jam on a machine and the operator could not easily access some of the product jammed in the counter-ejector area through the movable interlock guard. To reach that area they had to remove a fixed position guard.
+During clearing of the jam and while working in the unguarded area, the machine started and his little finger was caught by the belt pulling his arm into the machine. He pulled away and the result was a dislocation to his shoulder.
+
+
+A couple lessons to be learned here:
+Whenever you must remove a guard from a machine, the machine must be in full Lockout.
+Whenever you have a major jam, the machine must be in full Lockout.
+For minor jams and releases, the machine you must utilize the alternative measure of energy safe position to ensure the machine isn’t activated when you are reaching in release the product. This can happen by many ways including accidently tripping photo eyes or switches or having someone else not aware of what you are doing and activate part of the machine."
+    }
+    ,
+    {
+      "id": 11,
+      "name": "Step Ladder Safety",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "If you use a ladder only occasionally, chances are it's a stepladder. Accidents happen just as easily with stepladders as with other types of ladders and scaffolding, and the consequences can be just as serious. In fact, a study of ladder accidents found 20 per cent of the injuries involved stepladders. Of 23 cases studied, 12 persons were injured in leisure time and 11 during working hours.
+The most common type of accident was when the ladder tipped over sideways. These accidents were caused by reaching out too far to one side, causing an unintentional movement of the ladder. Other causes of stepladder accidents included placing the foot incorrectly, tripping and slipping, defective ladders and makeshift repairs, or failing to fold out the ladder properly.
+
+
+Here are some safety tips to follow when using a stepladder:
+- Inspect the stepladder to see if it is in good condition before using it. Ensure the rungs are solid and securely fitted in the stiles. Also check that the spreaders are in good shape and able to lock into place. Look for any twisting or distortions in the shape of the ladder.
+- Place the ladder on a solid, even surface. Don't place it on snow or ice. If you must position the ladder in a doorway or another traffic area, make sure the route is adequately barricaded to prevent collisions.
+- Lock the spreaders into place before ascending the ladder, and make sure the stepladder legs are fully open.
+- A stepladder is designed to be used in the open position. Never lean it against a wall to use it as a straight ladder.
+- Never climb onto the top two rungs of a stepladder. If you need to climb higher, get a longer ladder.
+- Always face the ladder when climbing up or down, and keep both hands on the side rails while climbing.
+- Do not carry tools or materials up or down a ladder with your hands.. Instead, carry them on a tool belt, or move them with rope or a basket. Never overload a ladder with heavy materials, and do not allow more than one person on any ladder at one time.
+- Do not reach out too far from the ladder in any direction. If you must reach away from the ladder to work, climb down and move the ladder to a new position."
+    }
+    ,
+    {
+      "id": 10,
+      "name": "Ladder Safety Rung By Rung",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "A ladder is an essential workplace tool for anyone working above ground level. However, each year more than half a million people are injured while using ladders.
+Anyone who uses the wrong ladder for a job or uses it inappropriately is courting trouble. Dont become a statistic. Remember these ladder safety tips:
+
+
+- Select the correct ladder. Why waver on the top rung of a stepladder when you can use an extension ladder? Never use a metal ladder if theres any chance of contacting electricity.
+- Never assume a ladder is safe. Check it for unsafe footing, broken steps, bent legs, bent supports, cracks, worn or slippery step treads, and worn or missing rubber feet. Dont use it if theres a problem.
+- Set the ladder up on flooring that is dry, even and clear of obstacles. Never lean the ladder against anything unstable (such as a stack of boxes) or place it in front of an unguarded or unlocked door.
+- Follow the belt buckle rule when using a stepladder, making sure your belt buckle goes no higher than the top step of the ladder. Climb the ladder only after ensuring the frame is locked securely in place.
+- Follow the four-to-one rule when setting up an extension ladder. Place the ladder with its base one foot away from the wall for every four feet in height. Secure the ladder to a stable object at the top and then lock the extension securely in place. Never stand on the top two steps of an extension ladder.
+- Ask a spotter to hold the base of the ladder while you climb and be especially careful when climbing a ladder on a windy day. Remember to fasten the top of the ladder securely to prevent it from tipping.
+- Ascend and descend the ladder facing the rungs with both hands on the edges. Hoist tools and materials only after you have reached the top of the ladder.
+- Take precautions to prevent a fall. Use both hands when climbing and lock a leg around a rung when you need to have one hand free. Never climb onto a ladder thats already supporting one person."
+    },
+    {
+      "id": 10,
+      "name": "Removing Guards",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "We recently had an incident at another facility where there was a jam on a machine and the operator could not easily access some of the product jammed in the counter-ejector area through the movable interlock guard. To reach that area they had to remove a fixed position guard.
+During clearing of the jam and while working in the unguarded area, the machine started and his little finger was caught by the belt pulling his arm into the machine. He pulled away and the result was a dislocation to his shoulder.
+
+
+A couple lessons to be learned here:
+Whenever you must remove a guard from a machine, the machine must be in full Lockout.
+Whenever you have a major jam, the machine must be in full Lockout.
+For minor jams and releases, the machine you must utilize the alternative measure of energy safe position to ensure the machine isn’t activated when you are reaching in release the product. This can happen by many ways including accidently tripping photo eyes or switches or having someone else not aware of what you are doing and activate part of the machine."
+    },
+    {
+      "id": 10,
+      "name": "Removing Guards",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "We recently had an incident at another facility where there was a jam on a machine and the operator could not easily access some of the product jammed in the counter-ejector area through the movable interlock guard. To reach that area they had to remove a fixed position guard.
+During clearing of the jam and while working in the unguarded area, the machine started and his little finger was caught by the belt pulling his arm into the machine. He pulled away and the result was a dislocation to his shoulder.
+
+
+A couple lessons to be learned here:
+Whenever you must remove a guard from a machine, the machine must be in full Lockout.
+Whenever you have a major jam, the machine must be in full Lockout.
+For minor jams and releases, the machine you must utilize the alternative measure of energy safe position to ensure the machine isn’t activated when you are reaching in release the product. This can happen by many ways including accidently tripping photo eyes or switches or having someone else not aware of what you are doing and activate part of the machine."
+    }*/
+  ]
+}

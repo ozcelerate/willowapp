@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Step Ladder Safety",
+      "date": "Nov 14, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Portrait-of-an-industrial-work-41642668.jpg",
+      "description": "A ladder is an essential workplace tool for anyone working above ground level. However, each year more than half a million people are injured while using ladders.",
+      "details": [
+        "The most common type of accident was when the ladder tipped over sideways. These accidents were caused by reaching out too far to one side, causing an unintentional movement of the ladder. Other causes of stepladder accidents included placing the foot incorrectly, tripping and slipping, defective ladders and makeshift repairs, or failing to fold out the ladder properly.",
+        "Here are some safety tips to follow when using a stepladder:"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ladder Safety Rung By Rung",
+      "date": "Nov 17, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Accident-At-Work-53124226.jpg",
+      "description": "If you use a ladder only occasionally, chances are it's a stepladder. Accidents happen just as easily with stepladders as with other types of ladders and scaffolding, and the consequences can be just as serious. In fact, a study of ladder accidents found 20 per cent of the injuries involved stepladders. Of 23 cases studied, 12 persons were injured in leisure time and 11 during working hours.",
+      "details": [
+        "Anyone who uses the wrong ladder for a job or uses it inappropriately is courting trouble. Dont become a statistic. Remember these ladder safety tips:"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Don't Bale",
+      "date": "Jan 14, 2017",
+      "image": "./assets/images/safety-focus/tipover.jpg",
+      "description": "Stay in cockpit when a vehicle rolls. I can't begin to tell you how many times this same story has played out all around the country.",
+      "details": "this will be a reference to a html page to insert"
+    },
+    {
+      "id": 4,
+      "name": "Forklift Blind Spots",
+      "date": "May 24, 2017",
+      "image": "./assets/images/safety-focus/forklift3.jpg",
+      "description": "When pedestrians for forklifts meet unexpectedly, it can have deadly consequences. Blind spots are one of the major causes for this unexpected..."
+    },
+    {
+      "id": 5,
+      "name": "Bring Your Child To Work Today",
+      "date": "Nov 14, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Father-and-son-50622572.jpg",
+      "details": "The suggestion would be to make everyday bring your child or grandchild to work day, not in body, but in mind. As you go out to work today I'd challenge you to do two things"
+    },
+    {
+      "id": 6,
+      "name": "Lockout Tagout",
+      "date": "Mar 29, 2017",
+      "image": "./assets/images/safety-focus/bigstock-Lockout-Tagout-4735301.jpg",
+      "description": "Anyone who operates, cleans, services, adjusts, and repairs machinery or equipment should be aware of the hazards associated with that machinery."
+    }
+
+  ]
+}
