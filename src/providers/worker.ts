@@ -12,6 +12,8 @@ import { WorkersModel } from '../classes/worker.model';
 @Injectable()
 export class WorkerService {
 
+  workersStatus: WorkersModel = new WorkersModel();
+
   constructor(public http: Http) {
     console.log('Hello Worker Provider');
   }
@@ -30,6 +32,14 @@ export class WorkerService {
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
+  }
+
+  setWorkersStatus(workers: WorkersModel) {
+    this.workersStatus.items = workers.items;
+  }
+
+  getWorkersStatus() {
+    return this.workersStatus;
   }
 
 }

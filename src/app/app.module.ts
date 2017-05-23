@@ -25,6 +25,7 @@ import { FiltersPage } from '../pages/filters/filters';
 import { SwmDetailPage } from '../pages/swm-detail/swm-detail';
 import { SwmListEditPage } from '../pages/swm-list-edit/swm-list-edit';
 import { ClockOnPage } from '../pages/clock-on/clock-on';
+import { ClockOffPage } from '../pages/clock-off/clock-off';
 import { SwmPage } from '../pages/swm/swm';
 import { SafetyFocusPage } from '../pages/safety-focus/safety-focus';
 import { SafetyFocusDetailPage } from '../pages/safety-focus-detail/safety-focus-detail';
@@ -82,6 +83,7 @@ import { SafetyIssueService } from '../providers/safety-issue';
     SwmDetailPage,
     SwmListEditPage,
     ClockOnPage,
+    ClockOffPage,
     SwmPage,
     SafetyFocusPage,
     SafetyFocusDetailPage,
@@ -126,6 +128,7 @@ import { SafetyIssueService } from '../providers/safety-issue';
     SwmDetailPage,
     SwmListEditPage,
     ClockOnPage,
+    ClockOffPage,
     SwmPage,
     SafetyFocusPage,
     SafetyFocusDetailPage,

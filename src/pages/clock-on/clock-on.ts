@@ -46,6 +46,8 @@ export class ClockOnPage {
   //ionViewDidLoad() {
   ionViewDidEnter() {
     console.log("ionViewDidEnter - clockOn " + this.firstTime);
+    // update service so signOff page knows about changes
+
     if (this.firstTime) {
       this.loading.present();
       this.workerService
@@ -58,10 +60,14 @@ export class ClockOnPage {
           // process the workerlist for swm compliance and statuses
           this.createViewArrays();
           this.loading.dismiss();
+          this.workerService.setWorkersStatus(this.workerlist);
+          
         });
     } else {
       console.log("clockOn page - not first time")
       this.createViewArrays();
+      this.workerService.setWorkersStatus(this.workerlist);
+
     }
 
 

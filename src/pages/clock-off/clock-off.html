@@ -6,29 +6,30 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Sign Off</ion-title>
+    <ion-title>Yabba Dabba Do</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="notifications-content">
-  <ion-item-group>
-    <ion-item-divider class="notifications-divider">Today</ion-item-divider>
-    <ion-item class="notification-item" *ngFor="let notification of notifications.today">
+  <h2 *ngIf="!hasDayStarted">Day hasn't started Yet</h2>
+  <ion-item-group *ngIf="hasDayStarted">
+    <ion-item-divider class="notifications-divider">Still Working</ion-item-divider>
+    <ion-item class="notification-item" *ngFor="let worker of workersWorking.items">
       <ion-avatar item-left>
-        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>
+        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="worker.image"></preload-image>
       </ion-avatar>
-      <h2 class="item-title">{{notification.name}}</h2>
-      <p class="item-description">{{notification.message}}</p>
-      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>
+      <h2 class="item-title">{{worker.name}}</h2>
+      <p class="item-description">{{worker.message}}</p>
+      <ion-note class="item-time" item-right>{{worker.clockOn}}</ion-note>
     </ion-item>
-    <ion-item-divider class="notifications-divider">Yesterday</ion-item-divider>
-    <ion-item class="notification-item" *ngFor="let notification of notifications.yesterday">
+    <ion-item-divider class="notifications-divider">Slater ...!</ion-item-divider>
+    <ion-item class="notification-item" *ngFor="let worker of workersFinished.items">
       <ion-avatar item-left>
-        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>
+        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="worker.image"></preload-image>
       </ion-avatar>
-      <h2 class="item-title">{{notification.name}}</h2>
-      <p class="item-description">{{notification.message}}</p>
-      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>
+      <h2 class="item-title">{{worker.name}}</h2>
+      <p class="item-description">{{worker.message}}</p>
+      <ion-note class="item-time" item-right>{{worker.clockOff}}</ion-note>
     </ion-item>
   </ion-item-group>
 </ion-content>
