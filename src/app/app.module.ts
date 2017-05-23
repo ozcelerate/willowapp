@@ -52,6 +52,7 @@ import { SwmService } from '../providers/swm';
 import { TaskService } from '../providers/task';
 import { WorkerService } from '../providers/worker';
 import { SafetyFocusService } from '../providers/safety-focus';
+import { SafetyIssueService } from '../providers/safety-issue';
 
 @NgModule({
   declarations: [
@@ -132,7 +133,8 @@ import { SafetyFocusService } from '../providers/safety-focus';
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,
-              TaskService, WorkerService, SafetyFocusService],
+              TaskService, WorkerService, SafetyFocusService,
+              SafetyIssueService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

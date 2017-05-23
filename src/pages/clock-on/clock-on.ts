@@ -21,6 +21,7 @@ export class ClockOnPage {
   workersNotStarted: WorkersModel = new WorkersModel();
   workersStarted: WorkersModel = new WorkersModel();
   loading: any;
+  firstTime: boolean;
 
   constructor(
     public nav: NavController,
@@ -28,61 +29,93 @@ export class ClockOnPage {
     public swmService: SwmService,
     public loadingCtrl: LoadingController
   ) {
+    console.log("ClockOnPage constructor");
+    this.firstTime = true;
     this.loading = this.loadingCtrl.create();
-    this.workersNotStarted.items = [];
-    this.workersStarted.items = [];
+    // this.workersNotStarted.items = [];
+    // this.workersStarted.items = [];
+    // this.workerService.getData().then(data => {
+    //   console.log("got worker data from service in clockOn constructor");
+    //   // just for mock data we only need to do this once
+    //   this.workerlist.items = data.items;
+    //   // now store the data back in the service (could have just )
+    //
+    // })
   }
 
   //ionViewDidLoad() {
   ionViewDidEnter() {
-    this.loading.present();
+    console.log("ionViewDidEnter - clockOn " + this.firstTime);
+    if (this.firstTime) {
+      this.loading.present();
+      this.workerService
+        .getData()
+        .then(data => {
+          this.firstTime = false;
+          this.workerlist.items = data.items;
+          console.log("got the worker data from service")
+          console.log(this.workerlist.items)
+          // process the workerlist for swm compliance and statuses
+          this.createViewArrays();
+          this.loading.dismiss();
+        });
+    } else {
+      console.log("clockOn page - not first time")
+      this.createViewArrays();
+    }
+
+
+  }
+
+  createViewArrays() {
+    // parse the workers array to provide swm compilance indication
+    // and whether the worker has started work or not.
     let rqswms = this.swmService.getRequiredSwms();
-    this.workersStarted.items = [];
-    this.workersNotStarted.items = [];
     console.log("list of required swms are " )
     console.log(rqswms)
-    this.workerService
-      .getData()
-      .then(data => {
-        this.workerlist.items = data.items;
-        console.log("got the worker data from service")
-        console.log(this.workerlist.items)
-        // process the workerlist for swm compliance and statuses
-        this.workerlist.items.map((worker) => {
-          // do swm compliance
-          console.log("print out worker")
-          console.log(worker)
-          worker.swmCompliant = true;
-          // if supervisor hasn't generated the swms yet then don't calc
-          if(typeof rqswms !== 'undefined') {
-            rqswms.forEach((rs) => {
-              console.log(rs)
-              console.log(worker.validSwms)
-              console.log(worker.validSwms.indexOf(rs))
-              if(worker.validSwms.indexOf(rs) === -1) {
-                // one of the required swms for the day isn't in the workers completed swm courses
-                worker.swmCompliant = false;
-                console.log("non compliant worker")
-                return
-              }
-            });
-          } else {
-            // set swmsNotSet flag
-
+    this.workersStarted.items = [];
+    this.workersNotStarted.items = [];
+    this.workerlist.items.map((worker) => {
+      // do swm compliance
+      console.log("print out worker")
+      console.log(worker)
+      worker.swmCompliant = true;
+      // if supervisor hasn't generated the swms yet then don't calc
+      if(typeof rqswms !== 'undefined') {
+        rqswms.forEach((rs) => {
+          console.log(rs)
+          console.log(worker.validSwms)
+          console.log(worker.validSwms.indexOf(rs))
+          if(worker.validSwms.indexOf(rs) === -1) {
+            // one of the required swms for the day isn't in the workers completed swm courses
+            worker.swmCompliant = false;
+            console.log("non compliant worker")
+            return
           }
+        });
+      } else {
+        // set swmsNotSet flag
 
-          // split workers into started and not started arrays - exclude
-          // workers that are finished for the day
-          if(worker.startedWork) {
-            if(!worker.finishedWork) {
-              this.workersStarted.items.push(worker);
-            }
-          } else {
-            this.workersNotStarted.items.push(worker);
-          }
-        })
-        this.loading.dismiss();
-      });
+      }
+
+      // split workers into started and not started arrays - exclude
+      // workers that are finished for the day
+      if(worker.clockedOn === true) {
+        console.log("clocked on detected ")
+        console.log(worker)
+        if(!worker.clockedOff) {
+          console.log(worker.name + " has started work")
+          this.workersStarted.items.push(worker);
+        } else {
+          console.log(worker.name + " has finished work so not included")
+        }
+      } else {
+        console.log("worker not started " + worker.name)
+        this.workersNotStarted.items.push(worker);
+      }
+    });
+    console.log("worker clocking")
+    console.log(this.workersStarted.items)
   }
 
 

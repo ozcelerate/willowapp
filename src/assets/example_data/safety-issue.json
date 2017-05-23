@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Read Issues",
+      "date": "Nov 14, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Portrait-of-an-industrial-work-41642668.jpg",
+      "description": "All daily issues need to be read and acknowledged"
+    },
+    {
+      "id": 2,
+      "name": "High Viz jackets to and from lunch room",
+      "date": "Nov 17, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Accident-At-Work-53124226.jpg",
+      "description": "High visibility uniforms need to be worn when walking to lunch rooms, clockoff and the car park."    },
+    {
+      "id": 3,
+      "name": "Don't spend all your pay on pay day",
+      "date": "Jan 14, 2017",
+      "image": "./assets/images/safety-focus/tipover.jpg",
+      "description": "Good idea to enjoy the weekend."
+    },
+    {
+      "id": 4,
+      "name": "Start christmas shoping",
+      "date": "May 24, 2017",
+      "image": "./assets/images/safety-focus/forklift3.jpg",
+      "description": "Don't spend December at westfield when you could be at Dan Murphys."
+    }
+  ]
+}

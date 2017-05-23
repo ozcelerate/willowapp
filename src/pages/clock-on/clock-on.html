@@ -23,16 +23,17 @@
       </ion-avatar>
       <h2 class="item-title">{{worker.name}} - {{worker.swmCompliant}}</h2>
       <p class="item-description">{{worker.message}}</p>
-      <ion-note class="item-time" item-right>{{worker.date}}</ion-note>
+      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->
     </ion-item>
     <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>
-    <ion-item class="notification-item" *ngFor="let worker of workersStarted.items">
+    <ion-item class="notification-item" *ngFor="let worker of workersStarted.items"
+              [ngClass]="{'non-compliant': !worker.swmCompliant}">
       <ion-avatar item-left>
         <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="worker.image"></preload-image>
       </ion-avatar>
       <h2 class="item-title">{{worker.name}}</h2>
       <p class="item-description">{{worker.message}}</p>
-      <ion-note class="item-time" item-right>{{worker.date}}</ion-note>
+      <ion-note class="item-time" item-right>{{worker.clockOn}}</ion-note>
     </ion-item>
   </ion-item-group>
 </ion-content>

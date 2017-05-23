@@ -33,6 +33,7 @@ export class SafetyFocusPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SafetyFocusPage');
+    this.loading.present();
     this.safetyFocusService.getData().then((sfd) => {
       console.log("got the safter focus data");
       this.safetyFocuses.items = sfd.items;

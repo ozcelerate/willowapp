@@ -1,3 +1,67 @@
 page-safety-issues {
+  ion-header {
+    @include header-styles(color($colors, header-alt, base), color($colors, header-alt, contrast));
+  }
+
+  ion-item-divider {
+    padding: 15px !important;
+    background-color: transparent !important;
+
+    .item-inner
+    {
+      min-height: 0px;
+
+      ion-label {
+        margin: 0px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: 0.9px;
+        color: $theme-color-3;
+      }
+    }
+  }
+  .checkbox-list
+	{
+		padding-left: 15px;
+		background-color: $white;
+		@include element-shadow();
+
+		@include checkbox-item-styles($white-d, $white, $theme-color-1);
+	}
+  .list-mini-content
+  {
+    background-color: color($colors, background, base);
+
+    .list-mini
+    {
+      @include layout-list-styles($theme-color-2, $white-d);
+
+      ion-list {
+        .list-item
+        {
+          .content-row
+          {
+            .item-title{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            &.one-line
+            {
+              @include align-items(center);
+
+              .item-description
+              {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 }

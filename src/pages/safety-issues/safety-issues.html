@@ -5,14 +5,43 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Safety Issues</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content class="list-mini-content">
+  <div class="list-mini">
+    <ion-list>
+      <button class="list-item" ion-item *ngFor="let item of safetyIssues.items">
+        <ion-row no-padding class="content-row one-line">
+          <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
+          <!--<ion-col no-padding width-18 class="item-avatar">
+            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+          </ion-col>-->
+          <ion-col no-padding width-90 class="item-content">
+            <h3 class="item-title">{{item.name}}</h3>
+            <p class="item-description">{{item.description}}</p>
+          </ion-col>
+          <ion-col no-padding width-10 class="item-icon">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </button>
+    </ion-list>
+  </div>
+  <ion-item-divider>Read and check off issues</ion-item-divider>
 
-<ion-content padding>
+    <ion-list class="checkbox-list">
+      <ion-item class="checkbox-item" *ngFor="let item of safetyIssues.items">
+        <ion-label>{{item.name}}</ion-label>
+        <ion-checkbox [(ngModel)]="item.issueChecked" (click)="verifyAllChecked()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <section class="form-section">
+      <button ion-button block class="form-action-button create-post-button"
+              (click)="clockOn()" [disabled]="!allChecked">Clock On</button>
+    </section>
 
 </ion-content>
