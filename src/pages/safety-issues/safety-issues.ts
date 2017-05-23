@@ -57,7 +57,7 @@ export class SafetyIssuesPage {
 
   clockOn() {
   let alert = this.alertCtrl.create({
-    title: 'Login',
+    title: this.worker.name,
     inputs: [
       {
         name: 'username',
@@ -78,7 +78,7 @@ export class SafetyIssuesPage {
         }
       },
       {
-        text: 'Login',
+        text: 'Sign On',
         handler: data => {
           console.log("clock on with " + data.username +  " " + data.password)
           console.log(this.worker.name)

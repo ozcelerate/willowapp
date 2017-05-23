@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 import 'rxjs/Rx';
 
@@ -21,14 +21,12 @@ export class ClockOffPage {
   constructor(
     public nav: NavController,
     public workerService: WorkerService,
-    public loadingCtrl: LoadingController
-  ) {
-    //this.loading = this.loadingCtrl.create();
-    //this.firstTime = true;
-  }
+    public alertCtrl: AlertController
+  ) { }
 
   ionViewDidEnter() {
     console.log("ionViewDidEnter - clockOff");
+
     this.workers.items = this.workerService.getWorkersStatus().items;
     this.createViewArrays();
     if ((this.workersWorking.items.length + this.workersFinished.items.length) === 0) {
@@ -65,14 +63,47 @@ export class ClockOffPage {
     console.log("worker clocking")
     console.log(this.workersWorking.items)
   }
-  // ionViewDidLoad() {
-  //   this.loading.present();
-  //   this.workerService
-  //     .getData()
-  //     .then(data => {
-  //       this.notifications.today = data.today;
-  //       this.notifications.yesterday = data.yesterday;
-  //         this.loading.dismiss();
-  //     });
-  // }
+
+  startSignOff(worker) {
+    console.log("start the signoff process for " + worker.name);
+    let alert = this.alertCtrl.create({
+      title: worker.name,
+      inputs: [
+        {
+          name: 'password',
+          placeholder: 'Password',
+          type: 'password'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Sign Off',
+          handler: data => {
+            console.log("clock off with " + worker.name +  " " + data.password)
+            console.log(worker.name)
+            console.log(typeof data.password)
+            if (data.password.localeCompare(worker.passcode) === 0) {
+              worker.clockedOff = true;
+              worker.clockOff = new Date().toTimeString().split(' ')[0];
+
+              this.createViewArrays();
+              // go back to signin page.
+              //this.navCtrl.popToRoot();
+            } else {
+              console.log ("incorrect passcode");
+
+            }
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 }

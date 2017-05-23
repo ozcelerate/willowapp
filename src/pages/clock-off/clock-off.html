@@ -14,7 +14,8 @@
   <h2 *ngIf="!hasDayStarted">Day hasn't started Yet</h2>
   <ion-item-group *ngIf="hasDayStarted">
     <ion-item-divider class="notifications-divider">Still Working</ion-item-divider>
-    <ion-item class="notification-item" *ngFor="let worker of workersWorking.items">
+    <ion-item class="notification-item" *ngFor="let worker of workersWorking.items"
+              (click)="startSignOff(worker)">
       <ion-avatar item-left>
         <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="worker.image"></preload-image>
       </ion-avatar>
