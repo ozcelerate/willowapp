@@ -63,6 +63,8 @@ export class MaWeatherController implements OnInit {
         let result = res.daily.data[0];
         result.dateName = this.getReadableDate();
         result.locationName = location;
+        result.icon = res.currently.icon;
+        result.summary = res.currently.summary;
         this.contentOptions = result;
         this.forecast = res;
       });
