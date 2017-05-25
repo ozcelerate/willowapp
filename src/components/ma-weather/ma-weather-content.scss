@@ -1,0 +1,84 @@
+ma-weather-content {
+    text-align: center;
+  
+
+  .sun-container {
+    text-align: center;
+    margin-top:1em;
+    .sun {
+      width: 30%;
+      padding-top: 30%;
+      background-position: center center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      position: relative;
+    }
+    .sun.sunset {
+      background-image: url('../assets/images/ma-weather-icons/sunset.png');
+    }
+    .sun.sunrise {
+      background-image: url('../assets/images/ma-weather-icons/sunrise.png');
+    }
+    .sun:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  .title {
+      h2 {
+          font-size: 1.5rem;
+      }
+      p {
+          font-size: 1.3rem;
+      }
+  }
+  .summary {
+      p {
+          font-size: 1.3rem;
+          opacity: 0.8;
+      }
+  }
+}
+
+.weather-icon-container {
+    ion-col, .weather-icon {
+      width: 100%;
+      padding-top: 100%;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center center;
+    }
+    .clear-day {
+        background-image: url('../assets/images/ma-weather-icons/clear-day.png');
+    }
+    .clear-night {
+        background-image: url('../assets/images/ma-weather-icons/clear-night.png');
+    }
+    .rain {
+        background-image: url('../assets/images/ma-weather-icons/rain.png');
+    }
+    .snow {
+        background-image: url('../assets/images/ma-weather-icons/snow.png');
+    }
+    .sleet {
+        background-image: url('../assets/images/ma-weather-icons/sleet.png');
+    }
+    .wind {
+        background-image: url('../assets/images/ma-weather-icons/wind.png');
+    }
+    .fog {
+        background-image: url('../assets/images/ma-weather-icons/fog.png');
+    }
+    .cloudy {
+        background-image: url('../assets/images/ma-weather-icons/cloudy.png');
+    }
+    .partly-cloudy-day {
+        background-image: url('../assets/images/ma-weather-icons/partly-cloudy-day.png');
+    }
+    .partly-cloudy-night {
+        background-image: url('../assets/images/ma-weather-icons/partly-cloudy-night.png');
+    }
+    .thunderstorm {
+        background-image: url('../assets/images/ma-weather-icons/thunderstorm.png');
+    }
+  }

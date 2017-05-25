@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Weather Details</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="mainSegment" color="light">
+      <ion-segment-button value="details">
+        Details
+      </ion-segment-button>
+      <ion-segment-button value="hourly">
+        Hourly
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="mainSegment">
+    <div *ngSwitchCase="'details'">
+      <ma-weather-content [options]="currentWeather"></ma-weather-content>
+      <ion-grid class="current-details">
+        <ion-row *ngFor="let x of details" [hidden]="x.value === '' || !x.value">
+          <ion-col class="detail-name" offset-1>{{x.text}}</ion-col>
+          <ion-col class="detail-value">{{x.value}} {{x.unit}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <ion-list *ngSwitchCase="'hourly'" class="hourly-list">
+      <div *ngFor="let h of hourly; let i = index;" class="accordion-item" [ngClass]="{'is-shown': currentAccordion === i, 'previous-shown': currentAccordion === i-1}">
+        <ion-item (click)="toggleAccordion(i)" class="accordion-header">
+          <ion-thumbnail item-left>
+            <div class="weather-icon-container">
+              <div [ngClass]="h.icon" class="weather-icon"></div>
+            </div>
+          </ion-thumbnail>
+          <h2>{{h.date}} <span class="time">{{h.time}}</span></h2>
+          <p>{{h.summary}}</p>
+          <span item-right>{{h.temperature.toFixed(0)}}° <ion-icon [name]="'arrow-round-' + h.difference"></ion-icon></span>
+        </ion-item>
+        <div class="accordion-content">
+          <div class="current-details">
+            <ion-row *ngFor="let x of h.details" [hidden]="x.value === '' || !x.value">
+              <ion-col class="detail-name" offset-1>{{x.text}}</ion-col>
+              <ion-col class="detail-value">{{x.value}} {{x.unit}}</ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+
+</ion-content>

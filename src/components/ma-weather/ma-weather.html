@@ -1,0 +1,24 @@
+<ion-card (click)="onClickComponent()" [color]="_color" tappable>
+  <div class="card-half-overlay"></div>
+  <ion-grid>
+    <ma-weather-content *ngIf="weatherLoaded && locationLoaded && !error.status" [options]="contentOptions"></ma-weather-content>
+    <ion-row align-items-center class="loading-container" *ngIf="!weatherLoaded && !locationLoaded && !error.status">
+      <ion-col align-self-center>
+        <ion-spinner name="crescent" [color]="spinnerColor"></ion-spinner>
+        <br>
+        Loading Data
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center class="error-container" *ngIf="error.status">
+      <ion-col align-self-center>
+        <ion-row><ion-col><ion-icon name="sad"></ion-icon></ion-col></ion-row>
+        <ion-row><ion-col><h2>{{error.message}}</h2></ion-col></ion-row>
+        <ion-row>
+          <ion-col>
+            <button clear ion-button (click)="loadData()" icon-only color="light"><ion-icon name="refresh"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

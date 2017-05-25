@@ -1,0 +1,26 @@
+.ma-weather-container {
+  text-align: center;
+  ion-card {
+    min-height: 40vw;
+    border-radius: 6px;
+    position: relative;
+    .card-half-overlay {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.04);
+      right: 0;
+      z-index: 0;
+    }
+  }
+  .loading-container {
+    min-height: 40vw;
+  }
+
+  .error-container {
+    min-height: 40vw;
+    ion-icon {
+      font-size: 3em;
+    }
+  }
+}

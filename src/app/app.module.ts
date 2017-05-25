@@ -55,6 +55,8 @@ import { WorkerService } from '../providers/worker';
 import { SafetyFocusService } from '../providers/safety-focus';
 import { SafetyIssueService } from '../providers/safety-issue';
 
+import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage } from '../components/ma-weather';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -95,7 +97,10 @@ import { SafetyIssueService } from '../providers/safety-issue';
     ShowHideInput,
     ColorRadio,
     CounterInput,
-    Rating
+    Rating,
+    MaWeatherContentController, 
+    MaWeatherController, 
+    MaWeatherDetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -132,7 +137,10 @@ import { SafetyIssueService } from '../providers/safety-issue';
     SwmPage,
     SafetyFocusPage,
     SafetyFocusDetailPage,
-    SafetyIssuesPage
+    SafetyIssuesPage,
+    MaWeatherContentController, 
+    MaWeatherController, 
+    MaWeatherDetailsPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,

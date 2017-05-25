@@ -1,0 +1,36 @@
+<ion-row class="title">
+    <ion-col>
+    <h2>{{_options.locationName}}</h2>
+    <p>{{_options.dateName}}</p>
+    </ion-col>
+</ion-row>
+
+<ion-row align-items-center>
+    <ion-col col col-4 align-self-center>
+        <h1>{{_options.apparentTemperatureMax?.toFixed(0)}}°</h1>
+        <h2>{{_options.apparentTemperatureMin?.toFixed(0)}}°</h2>
+    </ion-col>
+
+    <ion-col col col-4>
+        <ion-row class="weather-icon-container">
+            <ion-col [ngClass]="_options.icon">
+            </ion-col>
+        </ion-row>
+    </ion-col>
+
+    <ion-col col col-4 class="sun-container" align-self-center>
+        <div class="sun sunrise"></div>
+        {{getReadableTime(_options.sunriseTime)}}
+        <br>
+        <br>
+        <div class="sun sunset"></div>
+        <br>
+        {{getReadableTime(_options.sunsetTime)}}
+    </ion-col>
+</ion-row>
+
+<ion-row class="summary">
+    <ion-col>
+        <p>{{_options.summary}}</p>
+    </ion-col>
+</ion-row>
