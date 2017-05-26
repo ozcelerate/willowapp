@@ -13,7 +13,7 @@
 <ion-content class="list-mini-content">
   <div class="list-mini">
     <ion-list>
-      <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items">
+      <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items" (click)="onSelectItem(item)">
         <ion-row no-padding class="content-row one-line">
           <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
           <!--<ion-col no-padding width-18 class="item-avatar">
@@ -24,7 +24,7 @@
             <p class="item-description">{{item.description}}</p>
           </ion-col>
           <ion-col no-padding width-10 class="item-icon">
-            <ion-icon name="arrow-forward"></ion-icon>
+            <ion-icon name="checkmark" [hidden]="!item.selected"></ion-icon>
           </ion-col>
         </ion-row>
       </ion-item>

@@ -56,54 +56,63 @@ export class SafetyIssuesPage {
   // }
 
   clockOn() {
-  let alert = this.alertCtrl.create({
-    title: this.worker.name,
-    inputs: [
-      {
-        name: 'username',
-        placeholder: 'Username'
-      },
-      {
-        name: 'password',
-        placeholder: 'Password',
-        type: 'password'
-      }
-    ],
-    buttons: [
-      {
-        text: 'Cancel',
-        role: 'cancel',
-        handler: data => {
-          console.log('Cancel clicked');
+    let alert = this.alertCtrl.create({
+      title: this.worker.name,
+      inputs: [
+        {
+          name: 'username',
+          placeholder: 'Username'
+        },
+        {
+          name: 'password',
+          placeholder: 'Password',
+          type: 'password'
         }
-      },
-      {
-        text: 'Sign On',
-        handler: data => {
-          console.log("clock on with " + data.username +  " " + data.password)
-          console.log(this.worker.name)
-          console.log(typeof data.password)
-          if (data.password.localeCompare(this.worker.passcode) === 0) {
-            this.worker.clockedOn = true;
-            this.worker.clockOn = new Date().toTimeString().split(' ')[0];
-
-            // go back to signin page.
-            this.navCtrl.popToRoot();
-          } else {
-            console.log ("incorrect passcode");
-
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
           }
-          // if (User.isValid(data.username, data.password)) {
-          //   // logged in!
-          // } else {
-          //   // invalid login
-          //   return false;
-          // }
+        },
+        {
+          text: 'Sign On',
+          handler: data => {
+            console.log("clock on with " + data.username +  " " + data.password)
+            console.log(this.worker.name)
+            console.log(typeof data.password)
+            if (data.password.localeCompare(this.worker.passcode) === 0) {
+              this.worker.clockedOn = true;
+              this.worker.clockOn = new Date().toTimeString().split(' ')[0];
+
+              // go back to signin page.
+              this.navCtrl.popToRoot();
+            } else {
+              console.log ("incorrect passcode");
+
+            }
+            // if (User.isValid(data.username, data.password)) {
+            //   // logged in!
+            // } else {
+            //   // invalid login
+            //   return false;
+            // }
+          }
         }
-      }
-    ]
-  });
-  alert.present();
-}
+      ]
+    });
+    alert.present();
+  }
+
+  public onSelectItem(item): void {
+    item.selected = typeof item.selected !== 'undefined' ? !item.selected : true;
+    let allChecked = true;
+    this.safetyIssues.items.map((item: any) => {
+      if (!item.selected) allChecked = false;
+    });
+    this.allChecked = allChecked;
+  }
 
 }

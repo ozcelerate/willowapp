@@ -15,13 +15,22 @@ export class MaWeatherConfig {
     private _darkSkyParams = {
         units: 'si',
     }
-    constructor() {}
+
+    constructor(options?: MaWeatherConfigOptions) {
+        for (let option in options) {
+            this[option] = options[option];
+        }
+    }
 
     public get darkSkyUrl(): string {
         return this._darkSkyKey ? `${this._darkSkyUrl}${this._darkSkyKey}/` : '';
     }
 
-    public get darkSkyParams(): string {
+    public set darkSkyUrl(url: string) {
+        this._darkSkyUrl = url;
+    }
+
+    public get darkSkyParams(): any {
         let query = '?';
         for (let p in this._darkSkyParams) {
             query += (`${p}=${this._darkSkyParams[p]}&`)
@@ -29,8 +38,16 @@ export class MaWeatherConfig {
         return query;
     }
 
+    public set darkSkyParams(params: any) {
+        this._darkSkyParams = params;
+    }
+
     public get googleUrl(): string {
         return this._googleKey ? `${this._googleUrl}&api=${this._googleKey}&latlng=` : '';
+    }
+
+    public set googleUrl(url: string) {
+        this._googleUrl = url;
     }
 
     /**
@@ -64,4 +81,14 @@ export class MaWeatherConfig {
     public readableMessages(key: string): string {
         return this._readableMessages[key];
     }
+}
+
+export interface MaWeatherConfigOptions {
+    monthsName?: string[];
+    darkSkyUrl?: string;
+    darkSkyParams?: any;
+    _darkSkyKey?: string;
+    googleUrl?: string;
+    _googleKey?: string;
+    _readableMessages?: any;
 }

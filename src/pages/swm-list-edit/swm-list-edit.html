@@ -27,10 +27,21 @@
       </button>
     </ion-list>
   </div>-->
-  <ion-list>
-    <ion-item *ngFor="let item of swmlist.items">
-      <ion-label>{{item.name}}</ion-label>
-      <ion-checkbox [(ngModel)]="item.inuse"></ion-checkbox>
-    </ion-item>
-  </ion-list>
+  <div class="list-mini">
+    
+    <ion-list>
+        <ion-item class="list-item" tappable *ngFor="let item of swmlist.items" (click)="onSelectItem(item)">
+          <ion-row no-padding class="content-row one-line">
+            <ion-col no-padding width-90 class="item-content">
+              <h3 class="item-title">{{item.name}}</h3>
+              <p class="item-description">{{item.description}}</p>
+            </ion-col>
+            <ion-col no-padding width-10 class="item-icon">
+              <ion-icon name="checkmark" [hidden]="!item.selected"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+    </ion-list>
+
+  </div>
 </ion-content>

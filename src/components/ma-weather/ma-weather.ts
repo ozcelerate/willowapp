@@ -5,7 +5,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { MaWeatherDetailsPage } from './ma-weather-details';
 import { DarkSkyResponse, Currently, DailyData } from './dark-sky-response.model';
-import { MaWeatherConfig } from './ma-weather.config';
+import { MaWeatherConfig, MaWeatherConfigOptions } from './ma-weather.config';
 
 @Component({
   selector: 'ma-weather',
@@ -18,7 +18,7 @@ import { MaWeatherConfig } from './ma-weather.config';
 export class MaWeatherController implements OnInit {
 
   private _color: string;
-  private config: MaWeatherConfig = new MaWeatherConfig();
+  private config: MaWeatherConfig;
   private forecast: DarkSkyResponse;
 
   public contentOptions: DailyData | any = {};
@@ -28,7 +28,8 @@ export class MaWeatherController implements OnInit {
 
   
   constructor(private http: Http, private geo: Geolocation, private modalCtrl: ModalController, private navCtrl: NavController) {
-    
+    // You can set the params, api keys, urls by passing MaConfigOptions to constructor
+    this.config = new MaWeatherConfig();
   }
 
   @Input() 
