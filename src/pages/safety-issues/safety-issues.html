@@ -13,7 +13,7 @@
 <ion-content class="list-mini-content">
   <div class="list-mini">
     <ion-list>
-      <button class="list-item" ion-item *ngFor="let item of safetyIssues.items">
+      <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items">
         <ion-row no-padding class="content-row one-line">
           <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
           <!--<ion-col no-padding width-18 class="item-avatar">
@@ -27,7 +27,7 @@
             <ion-icon name="arrow-forward"></ion-icon>
           </ion-col>
         </ion-row>
-      </button>
+      </ion-item>
     </ion-list>
   </div>
   <ion-item-divider>Read and check off issues</ion-item-divider>

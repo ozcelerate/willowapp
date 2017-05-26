@@ -12,11 +12,23 @@ export class MaWeatherConfig {
         getUserLocation: 'Could not get current location, make sure GPS is on'
     }
 
+    private _darkSkyParams = {
+        units: 'si',
+    }
     constructor() {}
 
     public get darkSkyUrl(): string {
         return this._darkSkyKey ? `${this._darkSkyUrl}${this._darkSkyKey}/` : '';
     }
+
+    public get darkSkyParams(): string {
+        let query = '?';
+        for (let p in this._darkSkyParams) {
+            query += (`${p}=${this._darkSkyParams[p]}&`)
+        }
+        return query;
+    }
+
     public get googleUrl(): string {
         return this._googleKey ? `${this._googleUrl}&api=${this._googleKey}&latlng=` : '';
     }

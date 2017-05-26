@@ -114,7 +114,7 @@ export class MaWeatherController implements OnInit {
   public loadWeather(latitude: number, longitude: number): Promise<DarkSkyResponse> {
     return new Promise((resolve) => {
       if (this.config.darkSkyUrl !== '') {
-        let url = this.config.darkSkyUrl + latitude + ',' + longitude;
+        let url = `${this.config.darkSkyUrl}${latitude},${longitude}${this.config.darkSkyParams}`;
         this.http.get(url).map(res => res.json()).subscribe(
           (res: DarkSkyResponse) => {
             this.weatherLoaded = true;
