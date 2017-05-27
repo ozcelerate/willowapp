@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DarkSkyResponse, Currently, DailyData } from './dark-sky-response.model';
+import { Component, Input } from '@angular/core';
+import { Currently } from './dark-sky-response.model';
 
 @Component({
   selector: 'ma-weather-content',

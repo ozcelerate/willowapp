@@ -1,6 +1,6 @@
 ma-weather-content {
     text-align: center;
-  
+
 
   .sun-container {
     text-align: center;
@@ -26,17 +26,27 @@ ma-weather-content {
   }
   .title {
       h2 {
-          font-size: 1.5rem;
+          font-size: 2.6rem;
+          font-weight: bold;
       }
       p {
-          font-size: 1.3rem;
+          font-size: 1.8rem;
       }
   }
   .summary {
       p {
-          font-size: 1.3rem;
-          opacity: 0.8;
+          font-size: 1.8rem;
+          //opacity: 0.8;
+          font-weight: bold;
       }
+  }
+  .temperature {
+    h1 {
+      font-size: 4.2rem;
+    }
+    h2 {
+      font-size: 2.6rem;
+    }
   }
 }
 

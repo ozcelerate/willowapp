@@ -1,12 +1,12 @@
 <ion-row class="title">
     <ion-col>
-    <h2>{{_options.locationName}}</h2>
+    <h2 bold large>{{_options.locationName}}</h2>
     <p>{{_options.dateName}}</p>
     </ion-col>
 </ion-row>
 
 <ion-row align-items-center>
-    <ion-col col col-4 align-self-center>
+    <ion-col col col-4 align-self-center class="temperature">
         <h1>{{_options.apparentTemperatureMax?.toFixed(0)}}°</h1>
         <h2>{{_options.apparentTemperatureMin?.toFixed(0)}}°</h2>
     </ion-col>

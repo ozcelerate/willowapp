@@ -11,6 +11,11 @@ import { SwmService } from '../../providers/swm';
 import { TasksModel } from '../../classes/task.model';
 import { TaskService } from '../../providers/task';
 
+import { SafetyFocusesModel } from '../../classes/safety-focus.model';
+import { SafetyFocusService } from '../../providers/safety-focus';
+import { SafetyIssuesModel } from '../../classes/safety-issue.model';
+import { SafetyIssueService } from '../../providers/safety-issue';
+
 // import { List2Model } from '../list-2/list-2.model';
 // import { List2Service } from '../list-2/list-2.service';
 import 'rxjs/Rx';
@@ -32,6 +37,9 @@ export class PrestartPage {
   requiredSWMids: number[] = [];
   loading: any;
 
+  safetyFocuses: SafetyFocusesModel = new SafetyFocusesModel();
+  safetyIssues: SafetyIssuesModel = new SafetyIssuesModel();
+
   categories_checkbox_open: boolean;
   categories_checkbox_result;
   checkboxTagsForm: FormGroup;
@@ -40,7 +48,8 @@ export class PrestartPage {
               public alertCtrl: AlertController,
               public swmService: SwmService,
               public taskService: TaskService,
-            //  public list2Service: List2Service,
+              public safetyFocusService: SafetyFocusService,
+              public safetyIssueService: SafetyIssueService,
               public loadingCtrl: LoadingController) {
     this.section = "task";
     this.loading = this.loadingCtrl.create();
@@ -110,6 +119,19 @@ export class PrestartPage {
         //this.loading.dismiss();
       });
 
+    this.safetyFocusService
+      .getData()
+      .then((sfd) => {
+        console.log("got the safter focus data");
+        this.safetyFocuses.items = sfd.items;
+        console.log(this.safetyFocuses);
+      });
+
+    this.safetyIssueService.getData().then((issues) => {
+      console.log("got the safter issue data");
+      this.safetyIssues.items = issues.items
+    });
+
 
   }
 
@@ -138,6 +160,8 @@ export class PrestartPage {
   // Save the updated swm list to the swmService for use elsewhere
   generateSwms(){
     console.log("generate swms");
+    // clear the list first-child
+    this.requiredSWMids = [];
     // build an array of all the swm ids required
     this.tasklist.items.forEach((task) => {
       // only if the task is active
@@ -265,6 +289,12 @@ export class PrestartPage {
   editActiveSwms() {
     console.log("edit swm list");
     this.nav.push(SwmListEditPage);
+  }
+
+  prestartsComplete() {
+    console.log("prestart complete goto sign in")
+    this.nav.parent.select(1);
+
   }
 
 }

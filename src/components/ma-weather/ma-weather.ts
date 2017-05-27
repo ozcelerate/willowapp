@@ -4,8 +4,8 @@ import { ModalController, NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { MaWeatherDetailsPage } from './ma-weather-details';
-import { DarkSkyResponse, Currently, DailyData } from './dark-sky-response.model';
-import { MaWeatherConfig, MaWeatherConfigOptions } from './ma-weather.config';
+import { DarkSkyResponse, DailyData } from './dark-sky-response.model';
+import { MaWeatherConfig } from './ma-weather.config';
 
 @Component({
   selector: 'ma-weather',
@@ -26,13 +26,13 @@ export class MaWeatherController implements OnInit {
   public locationLoaded: boolean = false;
   public error: { status?: boolean, message?: string} = {};
 
-  
+
   constructor(private http: Http, private geo: Geolocation, private modalCtrl: ModalController, private navCtrl: NavController) {
     // You can set the params, api keys, urls by passing MaConfigOptions to constructor
     this.config = new MaWeatherConfig();
   }
 
-  @Input() 
+  @Input()
   set maColor(val: string) {
     this._color = val;
   }
@@ -108,9 +108,9 @@ export class MaWeatherController implements OnInit {
 
   /**
    * @description Calls DarkSky API to get weather details for given coordinates
-   * 
+   *
    * @param latitude
-   * @param longitude 
+   * @param longitude
    */
   public loadWeather(latitude: number, longitude: number): Promise<DarkSkyResponse> {
     return new Promise((resolve) => {
@@ -137,9 +137,9 @@ export class MaWeatherController implements OnInit {
 
   /**
    * @description Calls Google Map Geo Reverse API to get Address for given coordinates
-   * 
-   * @param latitude 
-   * @param longitude 
+   *
+   * @param latitude
+   * @param longitude
    */
   private getAddress(latitude: string, longitude: string): Promise<any> {
     return new Promise((resolve) => {
@@ -148,7 +148,10 @@ export class MaWeatherController implements OnInit {
         this.http.get(url).map(res => res.json()).subscribe(
           (res) => {
             this.locationLoaded = true;
-            let address  = res.results[0].formatted_address;
+            console.log("google location")
+            console.log(res)
+            //let address  = res.results[0].formatted_address;
+            let address  = res.results[0].address_components[2].long_name;
             resolve(address);
           },
           (err) => {
@@ -167,7 +170,7 @@ export class MaWeatherController implements OnInit {
 
   /**
    * @description Error Handler
-   * 
+   *
    * @param type - type of the error shows in which stage error happened. Based on this we show readable error message;
    * @param err  - error object
    */

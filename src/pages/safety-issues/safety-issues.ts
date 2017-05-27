@@ -56,13 +56,9 @@ export class SafetyIssuesPage {
   // }
 
   clockOn() {
-    let alert = this.alertCtrl.create({
+  let alert = this.alertCtrl.create({
       title: this.worker.name,
       inputs: [
-        {
-          name: 'username',
-          placeholder: 'Username'
-        },
         {
           name: 'password',
           placeholder: 'Password',

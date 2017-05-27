@@ -84,42 +84,53 @@
       </div>
     </div>
     <div *ngSwitchCase="'safety'" class="card-example-view">
-      <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">
-        <section class="form-section">
-          <h2 class="section-title">Credit Card Information</h2>
-          <ion-item>
-            <ion-label floating>Card Number</ion-label>
-            <ion-input type="text" formControlName="card_number"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating>Card Holder</ion-label>
-            <ion-input type="text" formControlName="card_holder"></ion-input>
-          </ion-item>
-          <ion-row no-padding class="multi-input-row">
-            <ion-col no-padding width-50>
-              <ion-item class="multi-input">
-                <ion-label floating>CVC</ion-label>
-                <ion-input type="text" formControlName="cvc"></ion-input>
-              </ion-item>
-            </ion-col>
-            <ion-col no-padding width-50>
-              <ion-item class="multi-input time-item">
-                <ion-label floating>Exp. Date</ion-label>
-                <ion-datetime formControlName="exp_date" displayFormat="MM/YYYY" pickerFormat="MM-YYYY"></ion-datetime>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </section>
-        <ion-list class="card-preferences">
-          <ion-item class="switcher-item">
-            <ion-label>Save this card</ion-label>
-            <ion-toggle formControlName="save_card"></ion-toggle>
-          </ion-item>
+
+      <div class="list-mini-content">
+      <div class="list-mini">
+        <ion-list>
+          <button class="list-item" ion-item *ngFor="let item of safetyFocuses.items"
+                  (click)="gotoSafetyFocusDetail(item)">
+            <ion-row no-padding class="content-row">
+              <ion-col no-padding width-20 class="item-avatar">
+                <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+              </ion-col>
+              <ion-col no-padding width-70 class="item-content">
+                <h3 class="item-title">{{item.name}}</h3>
+                <p class="item-description" rows="3">{{item.description}}</p>
+                <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->
+              </ion-col>
+              <ion-col no-padding width-10 class="item-icon">
+                <ion-icon name="arrow-forward"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </button>
         </ion-list>
+      </div>
+        <ion-item-divider>Read and check off issues</ion-item-divider>
+        <div class="list-mini">
+          <ion-list>
+            <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items">
+              <ion-row no-padding class="content-row one-line">
+                <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
+                <!--<ion-col no-padding width-18 class="item-avatar">
+                  <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+                </ion-col>-->
+                <ion-col no-padding width-90 class="item-content">
+                  <h3 class="item-title">{{item.name}}</h3>
+                  <p class="item-description">{{item.description}}</p>
+                </ion-col>
+                <ion-col no-padding width-10 class="item-icon">
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-list>
+        </div>
         <section class="form-section">
-          <button ion-button block class="form-action-button create-card-button" type="submit" [disabled]="!card_form.valid">Confirm</button>
+          <button ion-button block class="main-action-button create-event-button" (click)="prestartsComplete()">Prestarts Complete</button>
         </section>
-      </form>
     </div>
+
+  </div>
   </div>
 </ion-content>
