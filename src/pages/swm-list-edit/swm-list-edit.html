@@ -10,25 +10,8 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content class="list-mini-content">
-  <!--<div class="list-mini">
-    <ion-list>
-      <button class="list-item" ion-item *ngFor="let item of swmlist.items">
-        <ion-row no-padding class="content-row one-line" >
-          <ion-col no-padding width-18 class="item-avatar">
-            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
-          </ion-col>
-          <ion-col no-padding width-72 class="item-content">
-            <h3 class="item-title">{{item.name}}</h3>
-            <p class="item-description">{{item.description}}</p>
-          </ion-col>
-        </ion-row>
-      </button>
-    </ion-list>
-  </div>-->
   <div class="list-mini">
-    
     <ion-list>
         <ion-item class="list-item" tappable *ngFor="let item of swmlist.items" (click)="onSelectItem(item)">
           <ion-row no-padding class="content-row one-line">
@@ -37,11 +20,10 @@
               <p class="item-description">{{item.description}}</p>
             </ion-col>
             <ion-col no-padding width-10 class="item-icon">
-              <ion-icon name="checkmark" [hidden]="!item.selected"></ion-icon>
+              <ion-icon name="checkmark" [hidden]="!item.inuse"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-item>
     </ion-list>
-
   </div>
 </ion-content>

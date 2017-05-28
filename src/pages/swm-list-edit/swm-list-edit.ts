@@ -22,7 +22,7 @@ import { SwmService } from '../../providers/swm';
 export class SwmListEditPage {
 
   swmlist: SwmsModel = new SwmsModel();
-  public allChecked: boolean = false;
+  //public allChecked: boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public swmService: SwmService) {
     console.log("swm list edit page constructor")
@@ -50,14 +50,9 @@ export class SwmListEditPage {
     console.log("just set required swms")
     console.log(rqswms)
   }
-  public onSelectItem(item): void {
-    item.selected = typeof item.selected !== 'undefined' ? !item.selected : true;
-    let allChecked = true;
-    this.swmlist.items.map((item: any) => {
-      if (!item.selected) allChecked = false;
-    });
-    this.allChecked = allChecked;
 
+  public onSelectItem(item): void {
+    item.inuse = typeof item.inuse !== 'undefined' ? !item.inuse : true;
   }
 
 }
