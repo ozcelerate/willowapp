@@ -23,9 +23,9 @@ export class SafetyIssuesPage {
   allChecked: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public loadingCtrl: LoadingController,
-              public safetyIssueService: SafetyIssueService,
-              public alertCtrl: AlertController) {
+    public loadingCtrl: LoadingController,
+    public safetyIssueService: SafetyIssueService,
+    public alertCtrl: AlertController) {
     this.worker = this.navParams.get('worker');
     this.loading = this.loadingCtrl.create();
   }
@@ -41,22 +41,8 @@ export class SafetyIssuesPage {
     });
   }
 
-  verifyAllChecked() {
-    console.log("check if all issues read");
-    let ac = true;
-    this.safetyIssues.items.map((si) => {
-      ac = ac && si.issueChecked
-    })
-    this.allChecked = ac;
-  }
-
-  // clockOn() {
-  //   console.log("implement clock on");
-  //   // modal / action sheet with pass code
-  // }
-
   clockOn() {
-  let alert = this.alertCtrl.create({
+    let alert = this.alertCtrl.create({
       title: this.worker.name,
       inputs: [
         {
@@ -76,7 +62,7 @@ export class SafetyIssuesPage {
         {
           text: 'Sign On',
           handler: data => {
-            console.log("clock on with " + data.username +  " " + data.password)
+            console.log("clock on with " + data.username + " " + data.password)
             console.log(this.worker.name)
             console.log(typeof data.password)
             if (data.password.localeCompare(this.worker.passcode) === 0) {
@@ -86,15 +72,9 @@ export class SafetyIssuesPage {
               // go back to signin page.
               this.navCtrl.popToRoot();
             } else {
-              console.log ("incorrect passcode");
+              console.log("incorrect passcode");
 
             }
-            // if (User.isValid(data.username, data.password)) {
-            //   // logged in!
-            // } else {
-            //   // invalid login
-            //   return false;
-            // }
           }
         }
       ]
@@ -110,5 +90,4 @@ export class SafetyIssuesPage {
     });
     this.allChecked = allChecked;
   }
-
 }
