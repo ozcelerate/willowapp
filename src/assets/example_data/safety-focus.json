@@ -27,28 +27,28 @@
       "date": "Jan 14, 2017",
       "image": "./assets/images/safety-focus/tipover.jpg",
       "description": "Stay in cockpit when a vehicle rolls. I can't begin to tell you how many times this same story has played out all around the country.",
-      "details": "this will be a reference to a html page to insert"
+      "details": ["this will be a reference to a html page to insert"]
     },
     {
       "id": 4,
       "name": "Forklift Blind Spots",
       "date": "May 24, 2017",
       "image": "./assets/images/safety-focus/forklift3.jpg",
-      "description": "When pedestrians for forklifts meet unexpectedly, it can have deadly consequences. Blind spots are one of the major causes for this unexpected..."
+      "description": ["When pedestrians for forklifts meet unexpectedly, it can have deadly consequences. Blind spots are one of the major causes for this unexpected..."]
     },
     {
       "id": 5,
       "name": "Bring Your Child To Work Today",
       "date": "Nov 14, 2016",
       "image": "./assets/images/safety-focus/bigstock-Father-and-son-50622572.jpg",
-      "details": "The suggestion would be to make everyday bring your child or grandchild to work day, not in body, but in mind. As you go out to work today I'd challenge you to do two things"
+      "details": ["The suggestion would be to make everyday bring your child or grandchild to work day, not in body, but in mind. As you go out to work today I'd challenge you to do two things"]
     },
     {
       "id": 6,
       "name": "Lockout Tagout",
       "date": "Mar 29, 2017",
       "image": "./assets/images/safety-focus/bigstock-Lockout-Tagout-4735301.jpg",
-      "description": "Anyone who operates, cleans, services, adjusts, and repairs machinery or equipment should be aware of the hazards associated with that machinery."
+      "description": ["Anyone who operates, cleans, services, adjusts, and repairs machinery or equipment should be aware of the hazards associated with that machinery."]
     }
 
   ]
