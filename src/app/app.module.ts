@@ -55,6 +55,11 @@ import { WorkerService } from '../providers/worker';
 import { SafetyFocusService } from '../providers/safety-focus';
 import { SafetyIssueService } from '../providers/safety-issue';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+
 import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage } from '../components/ma-weather';
 
 @NgModule({
@@ -103,6 +108,8 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     MaWeatherDetailsPage
   ],
   imports: [
+    BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -144,8 +151,8 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,
-              TaskService, WorkerService, SafetyFocusService,
-              SafetyIssueService],
+              TaskService, WorkerService, SafetyFocusService, 
+              SafetyIssueService, SplashScreen, StatusBar],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}
