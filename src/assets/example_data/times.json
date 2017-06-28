@@ -1,0 +1,244 @@
+{
+  "times": [
+    {
+      "dateString": "yesterday",
+      "workers": [
+        {
+          "worker": "Alex",
+          "location": "7 Vanbrugh Park Road West",
+          "type": "work",
+          "lunch": false,
+          "start": "11:00 am",
+          "finish": "7:00 pm"
+        },
+        {
+          "worker": "Seth",
+          "location": "123 Fake Street",
+          "type": "work",
+          "lunch": true,
+          "start": "11:00 am",
+          "finish": "7:00 pm"
+        },
+        {
+          "worker": "UY",
+          "location": "Skype",
+          "type": "work",
+          "lunch": true,
+          "start": "7:00 am",
+          "finish": "4:00 pm"
+        },
+        {
+          "worker": "Sara",
+          "location": "Ritz",
+          "type": "work",
+          "lunch": false,
+          "start": "8:00 am",
+          "finish": "5:00 pm"
+        },
+        {
+          "worker": "LeRouge",
+          "location": "34 Soho Street",
+          "type": "work",
+          "lunch": false,
+          "start": "7:00 am",
+          "finish": "3:00 pm"
+        },
+        {
+          "worker": "Willo",
+          "location": "34 Cairns Street",
+          "type": "A/L",
+          "lunch": false,
+          "start": "11:00 am",
+          "finish": "7:00 pm"
+        },
+        {
+          "worker": "Mighty Mick",
+          "location": "34 Soho Street",
+          "type": "work",
+          "lunch": false,
+          "start": "7:00 am",
+          "finish": "7:00 pm"
+        }
+      ]
+    },
+
+  {"dateString": "today",
+  "workers": [
+    {
+      "worker": "Alex",
+      "location": "7 Vanbrugh Park Road West",
+      "type": "work",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "Seth",
+      "location": "123 Fake Street",
+      "type": "sick",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "UY",
+      "location": "Skype",
+      "type": "work",
+      "lunch": false,
+      "start": "7:00 am",
+      "finish": "4:00 pm"
+    },
+    {
+      "worker": "Sara",
+      "location": "Ritz",
+      "type": "work",
+      "lunch": false,
+      "start": "8:00 am",
+      "finish": "5:00 pm"
+    },
+    {
+      "worker": "LeRouge",
+      "location": "34 Soho Street",
+      "type": "work",
+      "lunch": false,
+      "start": "7:00 am",
+      "finish": "3:00 pm"
+    },
+    {
+      "worker": "Willo",
+      "location": "34 Cairns Street",
+      "type": "A/L",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "Mighty Mick",
+      "location": "34 Soho Street",
+      "type": "RDO",
+      "lunch": false,
+      "start": "7:00 am",
+      "finish": "7:00 pm"
+    }
+  ]},
+  {"dateString": "tomorrow",
+  "workers": [
+    {
+      "worker": "Alex",
+      "location": "7 Vanbrugh Park Road West",
+      "type": "work",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "Seth",
+      "location": "123 Fake Street",
+      "type": "work",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "UY",
+      "location": "Skype",
+      "type": "rdo",
+      "lunch": false,
+      "start": "7:00 am",
+      "finish": "4:00 pm"
+    },
+    {
+      "worker": "Sara",
+      "location": "Ritz",
+      "type": "work",
+      "lunch": false,
+      "start": "8:00 am",
+      "finish": "4:00 pm"
+    },
+    {
+      "worker": "LeRouge",
+      "location": "34 Soho Street",
+      "type": "work",
+      "lunch": true,
+      "start": "6:00 am",
+      "finish": "2:00 pm"
+    },
+    {
+      "worker": "Willo",
+      "location": "34 Cairns Street",
+      "type": "A/L",
+      "lunch": false,
+      "start": "11:00 am",
+      "finish": "7:00 pm"
+    },
+    {
+      "worker": "Mighty Mick",
+      "location": "34 Soho Street",
+      "type": "RDO",
+      "lunch": false,
+      "start": "7:00 am",
+      "finish": "7:00 pm"
+    }
+  ]},
+
+{  "dateString":  "Fri June 21",
+  "workers": [
+      {
+        "worker": "Alex",
+        "location": "7 Vanbrugh Park Road West",
+        "type": "work",
+        "lunch": false,
+        "start": "11:00 am",
+        "finish": "7:00 pm"
+      },
+      {
+        "worker": "Seth",
+        "location": "123 Fake Street",
+        "type": "sick",
+        "lunch": false,
+        "start": "11:00 am",
+        "finish": "7:00 pm"
+      },
+      {
+        "worker": "UY",
+        "location": "Skype",
+        "type": "work",
+        "lunch": false,
+        "start": "7:00 am",
+        "finish": "4:00 pm"
+      },
+      {
+        "worker": "Sara",
+        "location": "Ritz",
+        "type": "work",
+        "lunch": false,
+        "start": "8:00 am",
+        "finish": "5:00 pm"
+      },
+      {
+        "worker": "LeRouge",
+        "location": "34 Soho Street",
+        "type": "work",
+        "lunch": false,
+        "start": "7:00 am",
+        "finish": "3:00 pm"
+      },
+      {
+        "worker": "Willo",
+        "location": "34 Cairns Street",
+        "type": "A/L",
+        "lunch": false,
+        "start": "11:00 am",
+        "finish": "7:00 pm"
+      },
+      {
+        "worker": "Mighty Mick",
+        "location": "34 Soho Street",
+        "type": "RDO",
+        "lunch": false,
+        "start": "7:00 am",
+        "finish": "7:00 pm"
+      }
+    ]}
+  ]
+}

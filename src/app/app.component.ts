@@ -6,9 +6,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { FormsPage } from '../pages/forms/forms';
 import { LayoutsPage } from '../pages/layouts/layouts';
+import { TimesheetsPage } from '../pages/timesheets/timesheets';
 //import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
+import { Tudomundo } from '../providers/tudomundo';
 
 @Component({
   selector: 'app-root',
@@ -26,12 +28,17 @@ export class MyApp {
   pages: Array<{title: string, icon: string, component: any}>;
   pushPages: Array<{title: string, icon: string, component: any}>;
 
+  lennylu: string;
+  appGlobals: any;
+
+
   constructor(
     platform: Platform,
     public menu: MenuController,
     public app: App,
     public splashScreen: SplashScreen,
-    public statusBar: StatusBar
+    public statusBar: StatusBar,
+    private tudomundoService: Tudomundo
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -47,8 +54,13 @@ export class MyApp {
 
     this.pushPages = [
       { title: 'Layouts', icon: 'grid', component: LayoutsPage },
+      { title: 'Timesheets', icon: 'grid', component: TimesheetsPage },
       { title: 'Settings', icon: 'settings', component: SettingsPage }
     ];
+
+    this.lennylu = this.tudomundoService.getDebug();
+    // this.lennylu = "lenny lu"
+    this.appGlobals = this.tudomundoService.getLenny();
   }
 
   openPage(page) {

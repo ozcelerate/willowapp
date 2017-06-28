@@ -6,6 +6,9 @@ import { ListingPage } from '../pages/listing/listing';
 import { FeedPage } from '../pages/feed/feed';
 import { FollowersPage } from '../pages/followers/followers';
 import { LayoutsPage } from '../pages/layouts/layouts';
+import { TimesheetsPage } from '../pages/timesheets/timesheets';
+import { TimesheetVerifyPage } from '../pages/timesheet-verify/timesheet-verify';
+import { TimesheetHistoryPage } from '../pages/timesheet-history/timesheet-history';
 import { FormsPage } from '../pages/forms/forms';
 import { LoginPage } from '../pages/login/login';
 import { NotificationsPage } from '../pages/notifications/notifications';
@@ -54,6 +57,8 @@ import { TaskService } from '../providers/task';
 import { WorkerService } from '../providers/worker';
 import { SafetyFocusService } from '../providers/safety-focus';
 import { SafetyIssueService } from '../providers/safety-issue';
+import { Tudomundo } from '../providers/tudomundo';
+import { TimesService } from '../providers/times'
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -69,6 +74,9 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     FeedPage,
     FollowersPage,
     LayoutsPage,
+    TimesheetsPage,
+    TimesheetVerifyPage,
+    TimesheetHistoryPage,
     FormsPage,
     LoginPage,
     NotificationsPage,
@@ -103,8 +111,8 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     ColorRadio,
     CounterInput,
     Rating,
-    MaWeatherContentController, 
-    MaWeatherController, 
+    MaWeatherContentController,
+    MaWeatherController,
     MaWeatherDetailsPage
   ],
   imports: [
@@ -119,6 +127,9 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     FeedPage,
     FollowersPage,
     LayoutsPage,
+    TimesheetsPage,
+    TimesheetVerifyPage,
+    TimesheetHistoryPage,
     FormsPage,
     LoginPage,
     NotificationsPage,
@@ -145,14 +156,15 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     SafetyFocusPage,
     SafetyFocusDetailPage,
     SafetyIssuesPage,
-    MaWeatherContentController, 
-    MaWeatherController, 
+    MaWeatherContentController,
+    MaWeatherController,
     MaWeatherDetailsPage
   ],
   providers: [FeedService, ListingService, ProfileService, NotificationsService,
               List1Service, List2Service, ScheduleService, SwmService,
-              TaskService, WorkerService, SafetyFocusService, 
-              SafetyIssueService, SplashScreen, StatusBar],
+              TaskService, WorkerService, SafetyFocusService,
+              SafetyIssueService, SplashScreen, StatusBar, Tudomundo,
+              TimesService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

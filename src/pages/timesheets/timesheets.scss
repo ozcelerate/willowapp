@@ -1,0 +1,11 @@
+timesheet-page {
+	.timesheet-content
+	{
+		background-color: color($colors, background, base);
+
+		.timesheet-list
+		{
+			@include basic-list-styles($theme-color-3, $theme-color-2);
+		}
+	}
+}

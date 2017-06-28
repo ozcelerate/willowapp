@@ -15,6 +15,7 @@ import { SafetyFocusesModel } from '../../classes/safety-focus.model';
 import { SafetyFocusService } from '../../providers/safety-focus';
 import { SafetyIssuesModel } from '../../classes/safety-issue.model';
 import { SafetyIssueService } from '../../providers/safety-issue';
+import { Tudomundo } from '../../providers/tudomundo';
 
 // import { List2Model } from '../list-2/list-2.model';
 // import { List2Service } from '../list-2/list-2.service';
@@ -50,7 +51,8 @@ export class PrestartPage {
               public taskService: TaskService,
               public safetyFocusService: SafetyFocusService,
               public safetyIssueService: SafetyIssueService,
-              public loadingCtrl: LoadingController) {
+              public loadingCtrl: LoadingController,
+              private tudomundoService: Tudomundo) {
     this.section = "task";
     this.loading = this.loadingCtrl.create();
 
@@ -132,6 +134,8 @@ export class PrestartPage {
       this.safetyIssues.items = issues.items
     });
 
+    console.log("lenny debug is " + this.tudomundoService.getDebug())
+
 
   }
 
@@ -194,6 +198,10 @@ export class PrestartPage {
     this.swmService.updateSwmList(this.swmlist);
     // got next segment / tab for swms
     this.section = "swm";
+
+    // just some debug for testing
+    // change the tudomundo service data
+    this.tudomundoService.setLenny(true, "fireguys", "elory me boy")
   }
 
   generateActiveSwms() {

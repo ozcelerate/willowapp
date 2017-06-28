@@ -5,6 +5,7 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { TabsNavigationPage } from '../tabs-navigation/tabs-navigation';
 import { SignupPage } from '../signup/signup';
 import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { Tudomundo } from '../../providers/tudomundo';
 
 @Component({
   selector: 'login-page',
@@ -14,7 +15,7 @@ export class LoginPage {
   login: FormGroup;
   main_page: { component: any };
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController, private tudomundoService: Tudomundo) {
     this.main_page = { component: TabsNavigationPage };
 
     this.login = new FormGroup({
@@ -25,6 +26,15 @@ export class LoginPage {
 
   doLogin(){
     console.log(this.login.value);
+    // just for mock testing while there is no backend -- supervisor role
+    // if s@w.com = supervisor else any worker role
+
+    if (this.login.value.email === "d@vt.com") {
+      console.log("supervisor logged in");
+      this.tudomundoService.setLenny(true, "supervisor", "login done")
+    } else {
+      console.log("Worker logged in")
+    }
     this.nav.setRoot(this.main_page.component);
   }
 
