@@ -1,5 +1,7 @@
 {
   "name": "willowApp",
   "type": "ionic2-angular",
-  "app_id": "d7b59115"
+  "app_id": "d7b59115",
+  "v2": true,
+  "typescript": true
 }
