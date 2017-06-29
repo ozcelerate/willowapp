@@ -2,6 +2,7 @@
   "times": [
     {
       "dateString": "yesterday",
+      "workdate": null,
       "workers": [
         {
           "worker": "Alex",
@@ -70,6 +71,7 @@
     },
 
   {"dateString": "today",
+    "workdate": null,
   "workers": [
     {
       "worker": "Alex",
@@ -136,6 +138,7 @@
     }
   ]},
   {"dateString": "tomorrow",
+    "workdate": null,
   "workers": [
     {
       "worker": "Alex",
@@ -203,6 +206,7 @@
   ]},
 
 {  "dateString":  "Fri June 21",
+  "workdate": null,
   "workers": [
       {
         "worker": "Alex",

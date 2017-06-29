@@ -6,11 +6,14 @@ export class WorkDayModel {
   start?: string;
   finish?: string;
   hoursWorked?: string;
+  verified?: boolean;
 }
 
 export class TimesheetModel {
   id?: number;
   dateString: string;
+  workdate?: any;
+  allSelected?: boolean;
   workers: WorkDayModel[];
 }
 

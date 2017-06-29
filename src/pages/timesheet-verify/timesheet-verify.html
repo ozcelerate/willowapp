@@ -7,22 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>timesheet-verify</ion-title>
+    <ion-title>Verify Timesheets</ion-title>
   </ion-navbar>
-  <ion-toolbar>
-    <ion-title>Day Selector</ion-title>
+  <ion-toolbar class="willow-toolbar">
     <ion-grid>
       <ion-row>
         <ion-col col-2>
-          <button ion-button icon-only full>
+          <button ion-button icon-only full clear
+                  (click)="dayBack()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </ion-col>
         <ion-col col-8>
-          <button ion-button full>Full Button</button>
+          <button ion-button full outline>{{theDay}}</button>
         </ion-col>
         <ion-col col-2>
-          <button ion-button icon-only full>
+          <button ion-button icon-only full clear (click)="dayForward()">
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-col>
@@ -85,7 +85,7 @@
         </ng-template>
         <ng-template #chooseday>
           <ion-col>
-            <button ion-button full outline
+            <button ion-button full outline class="time-button"
                     (click)="chooseDayType(w)">{{w.dayString}}</button>
           </ion-col>
         </ng-template>
@@ -94,40 +94,16 @@
   </ion-row>
 </ion-grid>
 <ion-item>
-    <ion-label>Select All Verified</ion-label>
-    <ion-checkbox color="dark" checked="true"
-                  (ionChange)="selectAll()"
-                  [(ngModel)]="allSelected">></ion-checkbox>
-  </ion-item>
-
-<ion-item-group>
-  <ion-item-divider color="light">A</ion-item-divider>
-  <ion-item>Angola</ion-item>
-  <ion-item>Argentina</ion-item>
-</ion-item-group>
-<ion-item>
-  <ion-label>Date</ion-label>
-  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  <ion-label>Select All Verified</ion-label>
+  <ion-checkbox color="dark" checked="true"
+        (ionChange)="selectAll()"
+        [(ngModel)]="allSelected">></ion-checkbox>
 </ion-item>
-<ion-item>
-  <button ion-button icon-start>
-    <ion-icon name="star"></ion-icon>
-    Left Icon
-  </button>
 
-  <button ion-button icon-end item-end>
-    Right Icon
-    <ion-icon name="star"></ion-icon>
-  </button>
-</ion-item>
-<ion-list>
-  <ion-list-header>
-    Action
-  </ion-list-header>
-  <ion-item>Terminator II</ion-item>
-  <ion-item>The Empire Strikes Back</ion-item>
-  <ion-item>Blade Runner</ion-item>
-</ion-list>
+<section class="form-section">
+  <button ion-button block class="form-action-button create-post-button" (click)="submit()">Submit Verified Times</button>
+</section>
+
 <p>num of days {{days}}</p>
 <pre>{{today | json}}</pre>
 <pre>{{timesheets.times | json}}</pre>
