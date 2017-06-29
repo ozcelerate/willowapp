@@ -1,3 +1,44 @@
 page-timesheet-verify {
+  .multi-input-row
+  {
+    @include align-items(flex-end);
+
+    ion-col {
+      padding: 0px 7px;
+
+      &:first-child{
+        padding-left: 0px;
+      }
+
+      &:last-child{
+        padding-right: 0px;
+      }
+    }
+
+    .multi-input
+    {
+      margin: 0px;
+
+      &.item-datetime.item-label-floating
+      {
+        ion-label {
+          margin-top: 7px;
+        }
+
+        ion-datetime {
+          padding-top: 0px;
+        }
+      }
+
+      ion-datetime {
+        padding-left: 0px;
+
+        .datetime-text
+        {
+          color: $theme-color-3;
+        }
+      }
+    }
+  }
 
 }

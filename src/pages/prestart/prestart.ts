@@ -224,7 +224,7 @@ export class PrestartPage {
     let alert = this.alertCtrl.create({
       cssClass: 'category-prompt'
     });
-    alert.setTitle('Category');
+    alert.setTitle('Site');
 
     alert.addInput({
       type: 'radio',

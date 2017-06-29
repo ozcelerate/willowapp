@@ -5,6 +5,7 @@ export class WorkDayModel {
   lunch?: boolean;
   start?: string;
   finish?: string;
+  hoursWorked?: string;
 }
 
 export class TimesheetModel {

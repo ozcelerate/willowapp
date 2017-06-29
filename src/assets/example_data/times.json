@@ -6,58 +6,65 @@
         {
           "worker": "Alex",
           "location": "7 Vanbrugh Park Road West",
-          "type": "work",
+          "dayString": "work",
+          "dayCode": 1,
           "lunch": false,
-          "start": "11:00 am",
-          "finish": "7:00 pm"
+          "start": "11:00",
+          "finish": "19:00"
         },
         {
           "worker": "Seth",
           "location": "123 Fake Street",
-          "type": "work",
+          "dayString": "work",
+          "dayCode": 1,
           "lunch": true,
-          "start": "11:00 am",
-          "finish": "7:00 pm"
+          "start": "11:00",
+          "finish": "20:00"
         },
         {
           "worker": "UY",
           "location": "Skype",
-          "type": "work",
+          "dayString": "work",
+          "dayCode": 1,
           "lunch": true,
-          "start": "7:00 am",
-          "finish": "4:00 pm"
+          "start": "07:00",
+          "finish": "14:00"
         },
         {
           "worker": "Sara",
           "location": "Ritz",
-          "type": "work",
+          "dayString": "work",
+          "dayCode": 1,
           "lunch": false,
-          "start": "8:00 am",
-          "finish": "5:00 pm"
+          "start": "08:00",
+          "finish": "15:00"
         },
         {
           "worker": "LeRouge",
           "location": "34 Soho Street",
-          "type": "work",
+          "dayString": "RDO",
+          "dayCode": 4,
           "lunch": false,
-          "start": "7:00 am",
-          "finish": "3:00 pm"
+          "start": "",
+          "finish": null
         },
         {
           "worker": "Willo",
           "location": "34 Cairns Street",
-          "type": "A/L",
+          "dayString": "A/L",
+          "dayCode": 2,
           "lunch": false,
-          "start": "11:00 am",
-          "finish": "7:00 pm"
+          "start": "11:00",
+          "finish": "19:00"
         },
         {
           "worker": "Mighty Mick",
           "location": "34 Soho Street",
-          "type": "work",
+          "dayString": "work",
+          "dayCode": 1,
           "lunch": false,
-          "start": "7:00 am",
-          "finish": "7:00 pm"
+          "start": "07:00",
+          "finish": "17:00"
         }
       ]
     },
@@ -67,58 +74,65 @@
     {
       "worker": "Alex",
       "location": "7 Vanbrugh Park Road West",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "19:00"
     },
     {
       "worker": "Seth",
       "location": "123 Fake Street",
-      "type": "sick",
+      "dayString": "sick",
+      "dayCode": 3,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "18:00"
     },
     {
       "worker": "UY",
       "location": "Skype",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "7:00 am",
-      "finish": "4:00 pm"
+      "start": "07:00",
+      "finish": "16:00"
     },
     {
       "worker": "Sara",
       "location": "Ritz",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "8:00 am",
-      "finish": "5:00 pm"
+      "start": "08:00",
+      "finish": "20:00"
     },
     {
       "worker": "LeRouge",
       "location": "34 Soho Street",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "7:00 am",
-      "finish": "3:00 pm"
+      "start": "07:00",
+      "finish": "13:00"
     },
     {
       "worker": "Willo",
       "location": "34 Cairns Street",
-      "type": "A/L",
+      "dayString": "A/L",
+      "dayCode": 2,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "17:00"
     },
     {
       "worker": "Mighty Mick",
       "location": "34 Soho Street",
-      "type": "RDO",
+      "dayString": "RDO",
+      "dayCode": 4,
       "lunch": false,
-      "start": "7:00 am",
-      "finish": "7:00 pm"
+      "start": "07:00",
+      "finish": "17:00"
     }
   ]},
   {"dateString": "tomorrow",
@@ -126,58 +140,65 @@
     {
       "worker": "Alex",
       "location": "7 Vanbrugh Park Road West",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "17:00"
     },
     {
       "worker": "Seth",
       "location": "123 Fake Street",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "17:00"
     },
     {
       "worker": "UY",
       "location": "Skype",
-      "type": "rdo",
+      "dayString": "rdo",
+      "dayCode": 4,
       "lunch": false,
-      "start": "7:00 am",
-      "finish": "4:00 pm"
+      "start": "07:00",
+      "finish": "14:00"
     },
     {
       "worker": "Sara",
       "location": "Ritz",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": false,
-      "start": "8:00 am",
-      "finish": "4:00 pm"
+      "start": "08:00",
+      "finish": "14:00"
     },
     {
       "worker": "LeRouge",
       "location": "34 Soho Street",
-      "type": "work",
+      "dayString": "work",
+      "dayCode": 1,
       "lunch": true,
-      "start": "6:00 am",
-      "finish": "2:00 pm"
+      "start": "06:00",
+      "finish": "14:00"
     },
     {
       "worker": "Willo",
       "location": "34 Cairns Street",
-      "type": "A/L",
+      "dayString": "A/L",
+      "dayCode": 2,
       "lunch": false,
-      "start": "11:00 am",
-      "finish": "7:00 pm"
+      "start": "11:00",
+      "finish": "17:00"
     },
     {
       "worker": "Mighty Mick",
       "location": "34 Soho Street",
-      "type": "RDO",
+      "dayString": "RDO",
+      "dayCode": 4,
       "lunch": false,
-      "start": "7:00 am",
-      "finish": "7:00 pm"
+      "start": "07:00",
+      "finish": "17:00"
     }
   ]},
 
@@ -186,58 +207,65 @@
       {
         "worker": "Alex",
         "location": "7 Vanbrugh Park Road West",
-        "type": "work",
+        "dayString": "work",
+        "dayCode": 1,
         "lunch": false,
-        "start": "11:00 am",
-        "finish": "7:00 pm"
+        "start": "11:00",
+        "finish": "17:00"
       },
       {
         "worker": "Seth",
         "location": "123 Fake Street",
-        "type": "sick",
+        "dayString": "sick",
+        "dayCode": 3,
         "lunch": false,
-        "start": "11:00 am",
-        "finish": "7:00 pm"
+        "start": "11:00",
+        "finish": "17:00"
       },
       {
         "worker": "UY",
         "location": "Skype",
-        "type": "work",
+        "dayString": "work",
+        "dayCode": 1,
         "lunch": false,
-        "start": "7:00 am",
-        "finish": "4:00 pm"
+        "start": "07:00",
+        "finish": "14:00"
       },
       {
         "worker": "Sara",
         "location": "Ritz",
-        "type": "work",
+        "dayString": "work",
+        "dayCode": 1,
         "lunch": false,
-        "start": "8:00 am",
-        "finish": "5:00 pm"
+        "start": "08:00",
+        "finish": "15:00"
       },
       {
         "worker": "LeRouge",
         "location": "34 Soho Street",
-        "type": "work",
+        "dayString": "work",
+        "dayCode": 1,
         "lunch": false,
-        "start": "7:00 am",
-        "finish": "3:00 pm"
+        "start": "07:00",
+        "finish": "13:00"
       },
       {
         "worker": "Willo",
         "location": "34 Cairns Street",
-        "type": "A/L",
+        "dayString": "A/L",
+        "dayCode": 2,
         "lunch": false,
-        "start": "11:00 am",
-        "finish": "7:00 pm"
+        "start": "11:00",
+        "finish": "17:00"
       },
       {
         "worker": "Mighty Mick",
         "location": "34 Soho Street",
-        "type": "RDO",
+        "dayString": "RDO",
+        "dayCode": 4,
         "lunch": false,
-        "start": "7:00 am",
-        "finish": "7:00 pm"
+        "start": null,
+        "finish": ""
       }
     ]}
   ]
