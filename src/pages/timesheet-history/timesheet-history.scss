@@ -1,3 +1,31 @@
 page-timesheet-history {
 
+  button{
+    &.time-button {
+      color: $theme-color-1;
+      border-color: $theme-color-1;
+    }
+    // &.item-button {
+    //   color: $theme-color-1;
+    // }
+  }
+
+  .form-section
+  {
+    padding: 0px 14px;
+
+    .item:first-child
+    {
+      margin-top: 20px;
+    }
+
+    .form-action-button
+    {
+      margin: 0px;
+      margin-top: 20px;
+
+      @include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
+    }
+  }
+
 }

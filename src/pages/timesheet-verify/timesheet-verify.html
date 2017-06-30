@@ -30,85 +30,74 @@
 
     </ion-grid>
   </ion-toolbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
-<ion-grid>
-  <ion-row *ngFor="let w of today.workers">
-    <ion-col col-auto>
-      <ion-item>
-        <ion-checkbox [(ngModel)]="w.verified"></ion-checkbox>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <button ion-button full clear
-                    (click)="chooseDayType(w)">{{w.worker}}</button>
-          </ion-item>
-        </ion-col>
-        <div *ngIf="w.dayCode === 1; then workingday else chooseday">
-          this is ignored - debug only
-        </div>
-        <ng-template #workingday>
-            <ion-col>
-              <ion-item class="multi-input time-item">
-                <ion-datetime displayFormat="h mm a" pickerFormat="h mm A"
-                              [(ngModel)]="w.start"
-                              (ionChange)="timeChange(w)">
-                </ion-datetime>
-              </ion-item>
-            </ion-col>
-            <ion-col>
-              <ion-item class="multi-input time-item">
-                <ion-datetime displayFormat="h mm a" pickerFormat="h mm A"
-                            [(ngModel)]="w.finish"
-                            (ionChange)="timeChange(w)">
-                </ion-datetime>
-              </ion-item>
-            </ion-col>
-            <ion-col col-auto>
-              <ion-item>
-                <ion-icon *ngIf="!w.lunch" name="remove"></ion-icon>
-                <ion-icon *ngIf="w.lunch" name="restaurant"></ion-icon>
-              </ion-item>
-            </ion-col>
-            <ion-col>
-              <ion-item>
-                <p>{{w.hoursWorked}} hrs</p>
-              </ion-item>
-            </ion-col>
-        </ng-template>
-        <ng-template #chooseday>
+  <ion-grid>
+    <ion-row *ngFor="let w of today.workers">
+      <ion-col col-auto>
+        <ion-item>
+          <ion-checkbox [(ngModel)]="w.verified"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-row>
           <ion-col>
-            <button ion-button full outline class="time-button"
-                    (click)="chooseDayType(w)">{{w.dayString}}</button>
+            <ion-item>
+              <button ion-button full clear
+                      (click)="chooseDayType(w)">{{w.worker}}</button>
+            </ion-item>
           </ion-col>
-        </ng-template>
-      </ion-row>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<ion-item>
-  <ion-label>Select All Verified</ion-label>
-  <ion-checkbox color="dark" checked="true"
-        (ionChange)="selectAll()"
-        [(ngModel)]="allSelected">></ion-checkbox>
-</ion-item>
+          <div *ngIf="w.dayCode === 1; then workingday else chooseday">
+            this is ignored - debug only
+          </div>
+          <ng-template #workingday>
+              <ion-col>
+                <ion-item class="multi-input time-item">
+                  <ion-datetime displayFormat="h mm a" pickerFormat="h mm A"
+                                [(ngModel)]="w.start"
+                                (ionChange)="timeChange(w)">
+                  </ion-datetime>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item class="multi-input time-item">
+                  <ion-datetime displayFormat="h mm a" pickerFormat="h mm A"
+                              [(ngModel)]="w.finish"
+                              (ionChange)="timeChange(w)">
+                  </ion-datetime>
+                </ion-item>
+              </ion-col>
+              <ion-col col-auto>
+                <ion-item>
+                  <ion-icon *ngIf="!w.lunch" name="remove"></ion-icon>
+                  <ion-icon *ngIf="w.lunch" name="restaurant"></ion-icon>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <p>{{w.hoursWorked}} hrs</p>
+                </ion-item>
+              </ion-col>
+          </ng-template>
+          <ng-template #chooseday>
+            <ion-col>
+              <button ion-button full outline class="time-button"
+                      (click)="chooseDayType(w)">{{w.dayString}}</button>
+            </ion-col>
+          </ng-template>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label>Select All Verified</ion-label>
+    <ion-checkbox color="dark" checked="true"
+          (ionChange)="selectAll()"
+          [(ngModel)]="allSelected">></ion-checkbox>
+  </ion-item>
 
-<section class="form-section">
-  <button ion-button block class="form-action-button create-post-button" (click)="submit()">Submit Verified Times</button>
-</section>
-
-<p>num of days {{days}}</p>
-<pre>{{today | json}}</pre>
-<pre>{{timesheets.times | json}}</pre>
-
-
-
-
+  <section class="form-section">
+    <button ion-button block class="form-action-button create-post-button" (click)="submit()">Submit Verified Times</button>
+  </section>
 </ion-content>

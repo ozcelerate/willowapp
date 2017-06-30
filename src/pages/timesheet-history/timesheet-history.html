@@ -7,12 +7,90 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>timesheet-history</ion-title>
+    <ion-title>Timesheet History</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<h2>yo you</h2>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label>Employee</ion-label>
+    <ion-select [(ngModel)]="worker" interface="popover">
+      <ion-option value="Alex">Alex</ion-option>
+      <ion-option value="Seth">Seth</ion-option>
+      <ion-option value="Sara">Sara</ion-option>
+      <ion-option value="M$M">M$M</ion-option>
+      <ion-option value="Mighty Mick">Mighty Mick</ion-option>
+      <ion-option value="Willo">Willo</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-row no-padding class="multi-input-row">
+    <ion-col no-padding width-50>
+      <ion-item class="multi-input time-item">
+        <ion-label floating>From</ion-label>
+        <ion-datetime displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </ion-col>
+    <ion-col no-padding width-50>
+      <ion-item class="multi-input time-item">
+        <ion-label floating>To</ion-label>
+        <ion-datetime displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <section class="form-section">
+    <button ion-button block class="form-action-button create-post-button"
+            (click)="getTimes()" [disabled]="!worker">Retrive Times</button>
+  </section>
+  <ion-grid *ngIf="!noTimesYet">
+    <ion-row *ngFor="let dt of workerTimes">
+      <ion-col col-auto>
+        <ion-item>
+          {{dt.date}}
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <div *ngIf="dt.dayCode === 1; then workingday else chooseday">
+            this is ignored - debug only
+          </div>
+          <ng-template #workingday>
+              <ion-col>
+                <ion-item>
+                  {{dt.start}}
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  {{dt.finish}}
+                </ion-item>
+              </ion-col>
+              <ion-col col-auto>
+                <ion-item>
+                  <ion-icon *ngIf="!dt.lunch" name="remove"></ion-icon>
+                  <ion-icon *ngIf="dt.lunch" name="restaurant"></ion-icon>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <p>{{dt.hoursWorked}} hrs</p>
+                </ion-item>
+              </ion-col>
+          </ng-template>
+          <ng-template #chooseday>
+            <ion-col>
+              <button ion-button full outline class="time-button"
+                      (click)="chooseDayType(dt)">{{dt.dayString}}</button>
+            </ion-col>
+          </ng-template>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-list>
 </ion-content>

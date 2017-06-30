@@ -7,6 +7,7 @@ export class WorkDayModel {
   finish?: string;
   hoursWorked?: string;
   verified?: boolean;
+  date?: string;
 }
 
 export class TimesheetModel {

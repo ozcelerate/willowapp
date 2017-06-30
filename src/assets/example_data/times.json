@@ -1,7 +1,7 @@
 {
   "times": [
     {
-      "dateString": "yesterday",
+      "dateString": "Tue June 18",
       "workdate": null,
       "workers": [
         {
@@ -23,7 +23,7 @@
           "finish": "20:00"
         },
         {
-          "worker": "UY",
+          "worker": "M$M",
           "location": "Skype",
           "dayString": "work",
           "dayCode": 1,
@@ -70,7 +70,7 @@
       ]
     },
 
-  {"dateString": "today",
+  {"dateString": "Wed June 19",
     "workdate": null,
   "workers": [
     {
@@ -92,11 +92,11 @@
       "finish": "18:00"
     },
     {
-      "worker": "UY",
+      "worker": "M$M",
       "location": "Skype",
       "dayString": "work",
       "dayCode": 1,
-      "lunch": false,
+      "lunch": true,
       "start": "07:00",
       "finish": "16:00"
     },
@@ -130,14 +130,14 @@
     {
       "worker": "Mighty Mick",
       "location": "34 Soho Street",
-      "dayString": "RDO",
+      "dayString": "sick",
       "dayCode": 4,
       "lunch": false,
       "start": "07:00",
       "finish": "17:00"
     }
   ]},
-  {"dateString": "tomorrow",
+  {"dateString": "Thu June 20",
     "workdate": null,
   "workers": [
     {
@@ -159,11 +159,11 @@
       "finish": "17:00"
     },
     {
-      "worker": "UY",
+      "worker": "M$M",
       "location": "Skype",
       "dayString": "rdo",
       "dayCode": 4,
-      "lunch": false,
+      "lunch": true,
       "start": "07:00",
       "finish": "14:00"
     },
@@ -197,9 +197,9 @@
     {
       "worker": "Mighty Mick",
       "location": "34 Soho Street",
-      "dayString": "RDO",
-      "dayCode": 4,
-      "lunch": false,
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": true,
       "start": "07:00",
       "finish": "17:00"
     }
@@ -227,11 +227,11 @@
         "finish": "17:00"
       },
       {
-        "worker": "UY",
+        "worker": "M$M",
         "location": "Skype",
         "dayString": "work",
         "dayCode": 1,
-        "lunch": false,
+        "lunch": true,
         "start": "07:00",
         "finish": "14:00"
       },
@@ -256,11 +256,11 @@
       {
         "worker": "Willo",
         "location": "34 Cairns Street",
-        "dayString": "A/L",
-        "dayCode": 2,
+        "dayString": "work",
+        "dayCode": 1,
         "lunch": false,
-        "start": "11:00",
-        "finish": "17:00"
+        "start": "08:00",
+        "finish": "23:00"
       },
       {
         "worker": "Mighty Mick",
