@@ -7,6 +7,7 @@ import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { FormsPage } from '../pages/forms/forms';
 import { LayoutsPage } from '../pages/layouts/layouts';
 import { TimesheetsPage } from '../pages/timesheets/timesheets';
+import { WorkersPage } from '../pages/workers/workers'
 //import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
@@ -25,8 +26,8 @@ export class MyApp {
   //rootPage: any = TabsNavigationPage;
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, icon: string, component: any}>;
-  pushPages: Array<{title: string, icon: string, component: any}>;
+  pages: Array<{title: string, icon: string, component: any, supervisor?: boolean}>;
+  pushPages: Array<{title: string, icon: string, component: any, supervisor?: boolean}>;
 
   lennylu: string;
   appGlobals: any;
@@ -54,7 +55,8 @@ export class MyApp {
 
     this.pushPages = [
       { title: 'Layouts', icon: 'grid', component: LayoutsPage },
-      { title: 'Timesheets', icon: 'grid', component: TimesheetsPage },
+      { title: 'Timesheets', icon: 'grid', component: TimesheetsPage, supervisor: true },
+      { title: 'Workers', icon: 'people', component: WorkersPage, supervisor: true },
       { title: 'Settings', icon: 'settings', component: SettingsPage }
     ];
 
@@ -75,5 +77,16 @@ export class MyApp {
     this.menu.close();
     // rootNav is now deprecated (since beta 11) (https://forum.ionicframework.com/t/cant-access-rootnav-after-upgrade-to-beta-11/59889)
     this.app.getRootNav().push(page.component);
+  }
+
+  showPage(p) {
+    // console.log("page is " + p.title);
+    if (p.hasOwnProperty('supervisor')) {
+      // the page supervisor property may be set to false
+      if (p.supervisor) return this.appGlobals.supervisor;
+    }
+    // if page has no supervisor property or the page has supervisor prop false
+    // then anyone can see it.
+    return true;
   }
 }

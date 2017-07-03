@@ -7,6 +7,7 @@
         "date": "5:03 pm",
         "validSwms": [1,2],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": false,
         "clockedOff": false
       },
@@ -17,6 +18,7 @@
         "date": "2:54 pm",
         "validSwms": [1,2,3,4,5,6],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": true,
         "clockedOff": false,
         "clockOn": "7:45:00"
@@ -28,6 +30,7 @@
         "date": "1:54 pm",
         "validSwms": [1,2,5,6,7,8],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": true,
         "clockedOff": true,
         "clockOn": "8:15:00",
@@ -40,6 +43,7 @@
         "date": "9:11 pm",
         "validSwms": [2,3,4,5,6,7,8],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": false,
         "clockedOff": false
       },
@@ -50,6 +54,7 @@
         "date": "3:09 pm",
         "validSwms": [1,2,3],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": false,
         "clockedOff": false
       },
@@ -60,6 +65,7 @@
         "date": "11:34 am",
         "validSwms": [4],
         "passcode": "0101",
+        "siteSelected": true,
         "clockedOn": false,
         "clockedOff": false
       },
@@ -70,6 +76,7 @@
         "date": "7:12 am",
         "validSwms": [1,2,3,4,5,6,8],
         "passcode": "0101",
+        "siteSelected": false,
         "clockedOn": false,
         "clockedOff": false
       }

@@ -61,7 +61,7 @@ export class ClockOnPage {
           this.createViewArrays();
           this.loading.dismiss();
           this.workerService.setWorkersStatus(this.workerlist);
-          
+
         });
     } else {
       console.log("clockOn page - not first time")
@@ -111,13 +111,14 @@ export class ClockOnPage {
         console.log(worker)
         if(!worker.clockedOff) {
           console.log(worker.name + " has started work")
-          this.workersStarted.items.push(worker);
+          if(worker.siteSelected) this.workersStarted.items.push(worker);
         } else {
           console.log(worker.name + " has finished work so not included")
         }
       } else {
         console.log("worker not started " + worker.name)
-        this.workersNotStarted.items.push(worker);
+        // only add if worker is on this site
+        if(worker.siteSelected) this.workersNotStarted.items.push(worker);
       }
     });
     console.log("worker clocking")

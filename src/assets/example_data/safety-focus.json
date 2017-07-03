@@ -2,17 +2,49 @@
   "items": [
     {
       "id": 1,
+      "name": "PPE",
+      "date": "Nov 14, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Portrait-of-an-industrial-work-41642668.jpg",
+      "description": "Correct PPE to be work on site at all times.",
+      "selected": true,
+      "details": [
+        "Safety Glasses, Hard Hat, Steel capped boots, Ear protection, Long Sleeve shirt and long pants etc"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Daily prestart checks",
+      "date": "Nov 17, 2016",
+      "image": "./assets/images/safety-focus/bigstock-Accident-At-Work-53124226.jpg",
+      "description": "Checking equipment for defects prior to use.",
+      "selected": true,
+      "details": [
+        "EWP, Generator, Power Saw is tagged, RCD working"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Seat belts and flashing lights",
+      "date": "Jan 14, 2017",
+      "image": "./assets/images/safety-focus/tipover.jpg",
+      "description": "Seat belts to be worn at all times and flashing light to be on when driving on site.",
+      "selected": true,
+      "details": ["See full details at http://blah.com"]
+    },
+    {
+      "id": 4,
       "name": "Step Ladder Safety",
       "date": "Nov 14, 2016",
       "image": "./assets/images/safety-focus/bigstock-Portrait-of-an-industrial-work-41642668.jpg",
       "description": "A ladder is an essential workplace tool for anyone working above ground level. However, each year more than half a million people are injured while using ladders.",
+      "selected": true,
       "details": [
         "The most common type of accident was when the ladder tipped over sideways. These accidents were caused by reaching out too far to one side, causing an unintentional movement of the ladder. Other causes of stepladder accidents included placing the foot incorrectly, tripping and slipping, defective ladders and makeshift repairs, or failing to fold out the ladder properly.",
         "Here are some safety tips to follow when using a stepladder:"
       ]
     },
     {
-      "id": 2,
+      "id": 5,
       "name": "Ladder Safety Rung By Rung",
       "date": "Nov 17, 2016",
       "image": "./assets/images/safety-focus/bigstock-Accident-At-Work-53124226.jpg",
@@ -22,7 +54,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 6,
       "name": "Don't Bale",
       "date": "Jan 14, 2017",
       "image": "./assets/images/safety-focus/tipover.jpg",
@@ -30,21 +62,21 @@
       "details": ["this will be a reference to a html page to insert"]
     },
     {
-      "id": 4,
+      "id": 7,
       "name": "Forklift Blind Spots",
       "date": "May 24, 2017",
       "image": "./assets/images/safety-focus/forklift3.jpg",
       "description": ["When pedestrians for forklifts meet unexpectedly, it can have deadly consequences. Blind spots are one of the major causes for this unexpected..."]
     },
     {
-      "id": 5,
+      "id": 8,
       "name": "Bring Your Child To Work Today",
       "date": "Nov 14, 2016",
       "image": "./assets/images/safety-focus/bigstock-Father-and-son-50622572.jpg",
       "details": ["The suggestion would be to make everyday bring your child or grandchild to work day, not in body, but in mind. As you go out to work today I'd challenge you to do two things"]
     },
     {
-      "id": 6,
+      "id": 9,
       "name": "Lockout Tagout",
       "date": "Mar 29, 2017",
       "image": "./assets/images/safety-focus/bigstock-Lockout-Tagout-4735301.jpg",

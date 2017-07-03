@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TimesheetsModel } from '../../classes/timesheet.model';
+import { TimesheetsModel, WorkDayModel } from '../../classes/timesheet.model';
 import { TimesService } from '../../providers/times';
+import { Tudomundo } from '../../providers/tudomundo';
 import * as moment from 'moment';
 /**
  * Generated class for the TimesheetHistory page.
@@ -16,24 +17,36 @@ import * as moment from 'moment';
   templateUrl: 'timesheet-history.html',
 })
 export class TimesheetHistoryPage {
+  appGlobals: any;
   worker: string;
   timesheets: TimesheetsModel = new TimesheetsModel();
-  workerTimes: any[] = [1,2,3,4,5];
-  dvt: any[];
+  // workerTimes: any[] = [1,2,3,4,5];
+  // dvt: any[];
+  workerTimes: WorkDayModel[];
   noTimesYet: boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private timesService: TimesService) {
+              private timesService: TimesService,
+              private tudomundoService: Tudomundo) {
+      // get the globals that are used throught the app
+      this.appGlobals = this.tudomundoService.getLenny();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TimesheetHistory');
+
 
     this.timesService
       .getData()
       .then(data => {
         console.log("got timesheet data in verify times")
         this.timesheets.times = data.times;
+
+        // now if worker just get current times right now
+        if (!this.appGlobals.supervisor) {
+          this.worker = "M$M"; // hardwire for now until we get user logings working
+          this.getTimes();
+        }
       });
   }
 

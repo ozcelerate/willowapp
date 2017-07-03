@@ -33,7 +33,8 @@ export class LoginPage {
       console.log("supervisor logged in");
       this.tudomundoService.setLenny(true, "supervisor", "login done")
     } else {
-      console.log("Worker logged in")
+      console.log("Worker logged in");
+      this.tudomundoService.setLenny(false, "worker", this.login.value.email)
     }
     this.nav.setRoot(this.main_page.component);
   }

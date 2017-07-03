@@ -36,7 +36,7 @@ export class SafetyFocusPage {
     this.loading.present();
     this.safetyFocusService.getData().then((sfd) => {
       console.log("got the safter focus data");
-      this.safetyFocuses.items = sfd.items;
+      this.safetyFocuses.items = sfd.items.filter((sf) => sf.selected);
       console.log(this.safetyFocuses);
       this.loading.dismiss();
 

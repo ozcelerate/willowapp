@@ -3,6 +3,8 @@
     <ion-list class="menu-list">
       p{{lennylu}}p
       <p>lenny is {{appGlobals.lvtDebug}}</p>
+      <p *ngIf="appGlobals.supervisor">I'm a supervisor</p>
+      <p *ngIf="!appGlobals.supervisor">I'm not super</p>
       <button ion-item detail-none *ngFor="let page of pages" (click)="openPage(page)">
         <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>
         {{page.title}}
@@ -11,6 +13,13 @@
         <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>
         {{page.title}}
       </button>
+
+      <ng-container *ngFor="let page of pushPages">
+        <button ion-item detail-none *ngIf="showPage(page)" (click)="pushPage(page)">
+          <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>
+          {{page.title}}
+        </button>
+      </ng-container>
     </ion-list>
   </ion-content>
 </ion-menu>

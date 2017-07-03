@@ -1,0 +1,12 @@
+page-workers-onsite {
+
+  .checkbox-list
+  {
+    padding-left: 15px;
+    background-color: $white;
+    @include element-shadow();
+
+    @include checkbox-item-styles($white-d, $white, $theme-color-1);
+  }
+
+}

@@ -33,6 +33,8 @@ import { SwmPage } from '../pages/swm/swm';
 import { SafetyFocusPage } from '../pages/safety-focus/safety-focus';
 import { SafetyFocusDetailPage } from '../pages/safety-focus-detail/safety-focus-detail';
 import { SafetyIssuesPage } from '../pages/safety-issues/safety-issues';
+import { WorkersPage } from '../pages/workers/workers';
+import { WorkersOnsitePage } from '../pages/workers-onsite/workers-onsite';
 
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
@@ -103,6 +105,8 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     SafetyFocusPage,
     SafetyFocusDetailPage,
     SafetyIssuesPage,
+    WorkersPage,
+    WorkersOnsitePage,
 
     PreloadImage,
     BackgroundImage,
@@ -156,6 +160,8 @@ import { MaWeatherContentController, MaWeatherController, MaWeatherDetailsPage }
     SafetyFocusPage,
     SafetyFocusDetailPage,
     SafetyIssuesPage,
+    WorkersPage,
+    WorkersOnsitePage,
     MaWeatherContentController,
     MaWeatherController,
     MaWeatherDetailsPage

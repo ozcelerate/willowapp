@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Formwork",
       "image": "./assets/images/swms/jackhammer.png",
-      "description": "Setting up sheeting and support structures for suspended concrete slabs."
+      "description": "Safe erection and dismantling of formwork."
 
     },
     {
@@ -15,39 +15,21 @@
     },
     {
       "id": 3,
-      "name": "Excavation",
+      "name": "Steel Fixing",
       "image": "./assets/images/swms/excavate.png",
-      "description": "Operating procedures and working distances and access. Enviroment considerations"
+      "description": "Handing and fixing methods for steel reinforcement"
     },
     {
       "id": 4,
-      "name": "Scaffolding",
+      "name": "Operate EWP",
       "image": "./assets/images/swms/crane.png",
-      "description": "Foundation preparation. Assembly procedures. Maximum heights and clearances"
+      "description": "Safe use of EWP"
     },
     {
       "id": 5,
-      "name": "Electrical",
+      "name": "Cranage",
       "image": "./assets/images/swms/safetyBarrier.png",
-      "description": "Safety tag requirment. Permit to operate tagging. Emergency shutdown."
-    },
-    {
-      "id": 6,
-      "name": "Barge",
-      "image": "./assets/images/swms/safetyBarrier.png",
-      "description": "Driving the barge."
-    },
-    {
-      "id": 7,
-      "name": "Materials",
-      "image": "./assets/images/swms/tipper.png",
-      "description": "Delivery and acceptance of materials"
-    },
-    {
-      "id": 8,
-      "name": "Smoko",
-      "image": "./assets/images/swms/safetyBarrier.png",
-      "description": "Site made save and warnings and barricades in place"
+      "description": "Prestarts and operation. Emergency shutdown."
     }
   ]
 }

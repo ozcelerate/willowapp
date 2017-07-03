@@ -36,8 +36,8 @@ export class TimesService {
   //   this.workersStatus.items = workers.items;
   // }
 
-  getWorkersStatus() {
-    return this.workerTimes;
-  }
+  // getWorkersStatus() {
+  //   return this.workerTimes;
+  // }
 
   }

@@ -18,6 +18,7 @@ export class WorkerModel {
   ackSwms: boolean;
   ackSafetyFocus: boolean;
   ackIssues: boolean;
+  siteSelected: boolean;
 
 
 

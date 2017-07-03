@@ -28,7 +28,6 @@ import 'rxjs/Rx';
 export class PrestartPage {
   section: string;
 
-  post_form: any;
   event_form: FormGroup;
   card_form: FormGroup;
   //list2: List2Model = new List2Model();
@@ -56,23 +55,7 @@ export class PrestartPage {
     this.section = "task";
     this.loading = this.loadingCtrl.create();
 
-    this.post_form = new FormGroup({
-      //title: new FormControl('', Validators.required),
-      //description: new FormControl('', Validators.required),
-      //servings: new FormControl(2, counterRangeValidator(10, 1)),
-      //time: new FormControl('01:30', Validators.required),
-      //temperature: new FormControl(180),
 
-        // tag_1: new FormControl(false),
-        // tag_2: new FormControl(false),
-        // tag_3: new FormControl(true),
-        // tag_4: new FormControl(true),
-        // tag_5: new FormControl(false),
-        // tag_6: new FormControl(false),
-        // tag_7: new FormControl(true),
-        // tag_8: new FormControl(false)
-
-    });
     this.event_form = new FormGroup({
       title: new FormControl('', Validators.required),
       location: new FormControl('', Validators.required),
@@ -154,11 +137,6 @@ export class PrestartPage {
     console.log('Segment selected', segmentButton.value);
   }
 
-  createPost1(){
-    console.log("create post")
-    console.log(this.post_form.value);
-    //onsole.log(this.checkboxTagsForm.value);
-  }
 
   // Generate the active swms from the active tasks
   // Save the updated swm list to the swmService for use elsewhere

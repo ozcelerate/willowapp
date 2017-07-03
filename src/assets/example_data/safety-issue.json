@@ -2,10 +2,10 @@
   "items": [
     {
       "id": 1,
-      "name": "Read Issues",
+      "name": "Speeding on site",
       "date": "Nov 14, 2016",
       "image": "./assets/images/safety-focus/bigstock-Portrait-of-an-industrial-work-41642668.jpg",
-      "description": "All daily issues need to be read and acknowledged"
+      "description": "Complaints have been made about vehicles speeding on site. If you are caught you will be removed from site."
     },
     {
       "id": 2,
@@ -15,17 +15,17 @@
       "description": "High visibility uniforms need to be worn when walking to lunch rooms, clockoff and the car park."    },
     {
       "id": 3,
-      "name": "Don't spend all your pay on pay day",
+      "name": "Clock on / off",
       "date": "Jan 14, 2017",
       "image": "./assets/images/safety-focus/tipover.jpg",
-      "description": "Good idea to enjoy the weekend."
+      "description": "Must be done on arrival or pay will be calculated from login time."
     },
     {
       "id": 4,
-      "name": "Start christmas shoping",
+      "name": "Equipment being left out on site",
       "date": "May 24, 2017",
       "image": "./assets/images/safety-focus/forklift3.jpg",
-      "description": "Don't spend December at westfield when you could be at Dan Murphys."
+      "description": "Gear has been left out overnight. All equipment needs to be returned to the container and or compound each night."
     }
   ]
 }

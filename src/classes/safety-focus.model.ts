@@ -6,6 +6,7 @@ export class SafetyFocusModel {
   details: string;
   date: string;
   actions: string;
+  selected?: boolean;
 }
 export class SafetyFocusesModel {
   items: Array<SafetyFocusModel>;

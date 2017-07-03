@@ -53,10 +53,10 @@ export class ClockOffPage {
         console.log(worker)
         if(!worker.clockedOff) {
           console.log(worker.name + " is still working")
-          this.workersWorking.items.push(worker);
+          if(worker.siteSelected) this.workersWorking.items.push(worker);
         } else {
           console.log(worker.name + " has finished work")
-          this.workersFinished.items.push(worker);
+          if(worker.siteSelected) this.workersFinished.items.push(worker);
         }
       }
     });
